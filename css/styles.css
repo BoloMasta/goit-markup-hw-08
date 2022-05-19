@@ -112,6 +112,7 @@ header button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /* Nasz atuty */
@@ -122,13 +123,12 @@ header button {
   margin-right: auto;
   text-align: center;
   width: 1170px;
+  padding-top: 50px;
 }
 
 .atuty ul {
   list-style: none;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
   text-align: left;
 }
@@ -157,7 +157,101 @@ header button {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+  width: 250px;
+  text-align: justify;
+  color: #757575;
+}
+
+/* Czym się zajmujemy */
+
+.czym-sie-zajmujemy {
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.czym-sie-zajmujemy h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--glowny-kolor-czarny);
+}
+
+.czym-sie-zajmujemy img {
+  margin: 15px;
+}
+
+.czym-sie-zajmujemy ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.czym-sie-zajmujemy ul li {
+  display: inline;
+}
+
+/* Nasz zespół */
+
+.nasz-zespol {
+  background: #f5f4fa;
+}
+
+.nasz-zespol h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--glowny-kolor-czarny);
+  padding-top: 94px;
+}
+
+.nasz-zespol ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+}
+
+.nasz-zespol ul li {
+  display: inline;
   width: 270px;
+  height: 368px;
+}
+
+.nasz-zespol ul li figure {
+  display: inline;
+  width: 270px;
+  height: 368px;
+}
+
+.nasz-zespol ul li figure figcaption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--glowny-kolor-szary);
+}
+
+.nasz-zespol ul li figure figcaption b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--glowny-kolor-czarny);
 }
 
 /* Footer */
