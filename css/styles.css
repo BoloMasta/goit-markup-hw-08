@@ -50,11 +50,18 @@ div.menu > a.logo span {
   width: auto;
   height: 80px;
   padding: 0 220px 0 220px;
+  border: 1px solid #ececec;
+}
+
+div.menu > a.logo {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .menu nav ul {
   list-style: none;
-  display: block;
+  display: inline;
 }
 
 .menu nav ul li {
@@ -313,14 +320,90 @@ footer address a:hover {
   cursor: pointer;
 }
 
+/* Filters */
+
+.filters {
+  width: 672px;
+  height: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.filters button {
+  font-family: "Roboto";
+  font-style: normal;
+  background: var(--glowny-kolor-jasnoszary);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.66rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--glowny-kolor-czarny);
+  padding: 5px 25px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.filters button:focus,
+.filters button:hover {
+  background: var(--glowny-kolor-niebieki);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--glowny-kolor-bialy);
+}
+
 /* Portfolio */
+
+.portfolio {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .portfolio ul {
   list-style: none;
   display: block;
+  width: 1230px;
+  height: 1420px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio figure {
+  margin: auto;
 }
 
 .portfolio ul li {
   display: inline;
   float: left;
+  width: 370px;
+  height: 404px;
+  background: var(--glowny-kolor-bialy);
+  border: 1px solid #eeeeee;
+  margin: 15px;
+}
+
+.portfolio ul li figure h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--glowny-kolor-czarny);
+  margin: 0;
+}
+
+.portfolio ul li figure figcaption {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.portfolio figcaption {
+  width: 322px;
+  height: 70px;
 }
