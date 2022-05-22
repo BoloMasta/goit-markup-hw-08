@@ -9,6 +9,9 @@ html {
   --grey: #757575;
   --dark-grey: #2f303a;
   --white: #ffffff;
+  --menu-border: #ececec;
+  --button-border: rgba(0, 0, 0, 0.15);
+  --footer-adres: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -34,7 +37,7 @@ div.menu > a.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 1.625rem;
-  line-height: 1.9375rem;
+  line-height: 1.19;
   letter-spacing: 0.03rem;
 }
 
@@ -48,7 +51,7 @@ div.menu > a.logo span {
 .menu {
   width: auto;
   height: 80px;
-  border: 1px solid #ececec;
+  border: 1px solid var(--menu-border);
   padding: 0px 15%;
 }
 
@@ -70,7 +73,7 @@ footer > a,
 .menu a {
   font-weight: 500;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.14;
   letter-spacing: 0.02rem;
   color: var(--black);
   text-decoration: none;
@@ -125,7 +128,7 @@ footer > a:focus,
 .header h1 {
   font-weight: 900;
   font-size: 2.75rem;
-  line-height: 3.75rem;
+  line-height: 1.36;
   color: var(--white);
   text-transform: uppercase;
   text-align: center;
@@ -139,15 +142,18 @@ footer > a:focus,
   height: 50px;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.875rem;
+  line-height: 1.875;
   display: block;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--button-border);
   border-radius: 4px;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.header button:hover,
+.header button:active {
+  box-shadow: 0px 0px 2px var(--white);
 }
 
 /* Nasz atuty */
@@ -181,7 +187,7 @@ footer > a:focus,
 .advantages ul li h3 {
   font-weight: 700;
   font-size: 0.875em;
-  line-height: 1rem;
+  line-height: 1.14;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
   width: 270px;
@@ -190,7 +196,7 @@ footer > a:focus,
 
 .advantages ul li p {
   font-size: 0.875em;
-  line-height: 1.5rem;
+  line-height: 1.71;
   letter-spacing: 0.03rem;
   width: 270px;
   text-align: justify;
@@ -211,7 +217,7 @@ footer > a:focus,
 .what-we-do h2 {
   font-weight: 700;
   font-size: 2.25rem;
-  line-height: 2.625rem;
+  line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
@@ -243,7 +249,7 @@ footer > a:focus,
 .our-team h2 {
   font-weight: 700;
   font-size: 2.25rem;
-  line-height: 2.625rem;
+  line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
@@ -279,7 +285,7 @@ footer > a:focus,
 
 .our-team ul li figure figcaption {
   font-size: 1rem;
-  line-height: 1.1875rem;
+  line-height: 1.1875;
   letter-spacing: 0.03em;
   color: var(--grey);
 }
@@ -287,7 +293,7 @@ footer > a:focus,
 .our-team ul li figure figcaption b {
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.1875rem;
+  line-height: 1.1875;
   display: block;
   letter-spacing: 0.03em;
   color: var(--black);
@@ -300,11 +306,12 @@ footer {
   height: 252px;
   background-color: var(--dark-grey);
   color: var(--white);
-  padding-left: 220px;
+  padding: 0px 250px;
 }
 
 footer a.logo {
   font-size: 1.625rem;
+  line-height: 1.19;
   padding-top: 50px;
   float: left;
   margin-bottom: 10px;
@@ -314,15 +321,15 @@ footer address {
   margin-bottom: 60px;
   letter-spacing: 0.03em;
   font-size: 0.875rem;
-  line-height: 1.5rem;
+  line-height: 1.71;
   clear: left;
-  line-height: 30px;
+  font-style: normal;
 }
 
 footer address a:visited,
 footer address a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-adres);
 }
 
 footer address a:active,
@@ -347,7 +354,7 @@ footer address a:hover {
   border-radius: 4px;
   font-weight: 500;
   font-size: 1em;
-  line-height: 1.66rem;
+  line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
@@ -375,8 +382,8 @@ footer address a:hover {
 .portfolio ul {
   list-style: none;
   display: block;
-  width: 1230px;
-  height: 1420px;
+  width: 1210px;
+  height: 1360px;
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -399,7 +406,7 @@ footer address a:hover {
 .portfolio ul li figure h3 {
   font-weight: 700;
   font-size: 1.1rem;
-  line-height: 2rem;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--black);
   margin: 0 0 10px 0;
@@ -407,7 +414,7 @@ footer address a:hover {
 
 .portfolio ul li figure figcaption {
   font-size: 1rem;
-  line-height: 1.9rem;
+  line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--grey);
   margin: 15px auto 0 auto;
