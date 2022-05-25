@@ -25,17 +25,18 @@ body {
   margin: 0 auto;
 }
 
-.section {
+section {
   padding: 94px 0;
 }
 
 /* Logo */
 
-footer > a.logo {
+footer > div > a.logo {
   color: var(--white);
+  text-decoration: none;
 }
 
-footer > a.logo,
+footer > div > a.logo,
 div.menu > a.logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -44,7 +45,7 @@ div.menu > a.logo {
   letter-spacing: 0.03rem;
 }
 
-footer > a.logo span,
+footer > div > a.logo span,
 div.menu > a.logo span {
   color: var(--blue);
 }
@@ -58,6 +59,10 @@ div.menu {
   border-bottom: 1px solid var(--menu-border);
   align-items: center;
   justify-content: space-between;
+}
+
+.menu nav {
+  margin-right: 125px;
 }
 
 .menu nav ul {
@@ -104,16 +109,10 @@ div.menu > :nth-child(n + 2):active {
 /* Header */
 
 .header {
-  width: auto;
   height: 600px;
   background-color: var(--dark-grey);
-}
-
-.header div {
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 160px;
+  display: flex;
+  align-items: center;
 }
 
 .header h1 {
@@ -125,6 +124,7 @@ div.menu > :nth-child(n + 2):active {
   text-align: center;
   letter-spacing: 0.06rem;
   margin: 30px 0;
+  max-width: 696px;
 }
 
 .header button {
@@ -146,8 +146,8 @@ div.menu > :nth-child(n + 2):active {
 /* Nasz atuty */
 
 .advantages {
-  padding-top: 50px;
   margin: 0 auto;
+  display: flex;
 }
 
 .advantages ul {
@@ -187,7 +187,6 @@ div.menu > :nth-child(n + 2):active {
 /* Czym się zajmujemy */
 
 .what-we-do {
-  padding: 40px 0;
   clear: both;
   text-align: center;
 }
@@ -199,10 +198,11 @@ div.menu > :nth-child(n + 2):active {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
+  margin-top: 0px;
 }
 
 .what-we-do img {
-  margin: 15px;
+  margin: 12px;
 }
 
 .what-we-do ul {
@@ -228,7 +228,7 @@ div.menu > :nth-child(n + 2):active {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
-  padding-top: 94px;
+  margin-top: 0px;
 }
 
 .our-team ul {
@@ -246,7 +246,7 @@ div.menu > :nth-child(n + 2):active {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin: 0px 15px 90px 15px;
+  margin: 0px 15px;
 }
 
 .our-team ul li figure {
@@ -313,11 +313,7 @@ footer address a:hover {
 /* Filters */
 
 .filters {
-  width: 672px;
-  height: 54px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+  display: flex;
 }
 
 .filters button {
@@ -347,8 +343,7 @@ footer address a:hover {
 /* Projects */
 
 .projects {
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: -100px;
 }
 
 .projects ul {
@@ -364,7 +359,7 @@ footer address a:hover {
 }
 
 .projects figure {
-  margin: auto;
+  margin: 0 auto;
 }
 
 .projects ul li {
