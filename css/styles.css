@@ -69,6 +69,12 @@ div.menu > a.logo span {
   margin: 32px 2.23%;
 }
 
+.menu nav ul li a:focus,
+.menu nav ul li a:hover,
+.menu nav ul li a:active {
+  color: var(--blue);
+}
+
 footer > a,
 .menu a {
   font-weight: 500;
@@ -91,20 +97,9 @@ div.menu > :nth-child(4) {
   float: right;
 }
 
-/* szerokosci 405 127 103 255 348 362*/
-/* szerokosci 25,32 7,94 6,43 15,93 21,75 22,63 = 100 */
-/* szerokosci 1120  */
-
-.menu a:visited {
-  color: var(--black);
-}
-
-footer > a:active,
-footer > a:hover,
-footer > a:focus,
-.menu a:active,
-.menu a:hover,
-.menu a:focus {
+div.menu > :nth-child(n + 2):focus,
+div.menu > :nth-child(n + 2):hover,
+div.menu > :nth-child(n + 2):active {
   color: var(--blue);
 }
 
@@ -121,7 +116,6 @@ footer > a:focus,
   height: 120px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: auto;
   padding-top: 200px;
 }
 
@@ -151,19 +145,10 @@ footer > a:focus,
   cursor: pointer;
 }
 
-.header button:hover,
-.header button:active {
-  box-shadow: 0px 0px 2px var(--white);
-}
-
 /* Nasz atuty */
 
 .advantages {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
   padding-top: 50px;
-  height: 200px;
 }
 
 .advantages ul {
@@ -171,8 +156,6 @@ footer > a:focus,
   list-style: none;
   margin: 0;
   padding: 0;
-  position: relative;
-  left: 50%;
 }
 
 .advantages ul li {
@@ -180,8 +163,6 @@ footer > a:focus,
   display: block;
   float: left;
   padding: 0;
-  position: relative;
-  right: 50%;
 }
 
 .advantages ul li h3 {
@@ -209,8 +190,6 @@ footer > a:focus,
 .what-we-do {
   padding: 40px 0;
   clear: both;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -228,21 +207,18 @@ footer > a:focus,
 }
 
 .what-we-do ul {
-  display: block;
   list-style: none;
   padding: 0;
 }
 
 .what-we-do ul li {
-  display: inline;
+  display: inline-block;
 }
 
 /* Nasz zespół */
 
 .our-team {
   background: var(--light-grey);
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -264,7 +240,6 @@ footer > a:focus,
 }
 
 .our-team ul li {
-  display: inline;
   width: 270px;
   height: 368px;
   float: left;
@@ -276,7 +251,6 @@ footer > a:focus,
 }
 
 .our-team ul li figure {
-  display: inline;
   width: 270px;
   height: 368px;
   text-align: center;
@@ -372,29 +346,25 @@ footer address a:hover {
   color: var(--white);
 }
 
-/* Portfolio */
+/* Projects */
 
-.portfolio {
+.projects {
   margin-left: auto;
   margin-right: auto;
 }
 
-.portfolio ul {
+.projects ul {
   list-style: none;
-  display: block;
   width: 1210px;
   height: 1360px;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.portfolio figure {
+.projects figure {
   margin: auto;
 }
 
-.portfolio ul li {
-  display: inline;
+.projects ul li {
   float: left;
   width: 370px;
   height: 404px;
@@ -403,7 +373,7 @@ footer address a:hover {
   margin: 15px;
 }
 
-.portfolio ul li figure h3 {
+.projects ul li figure h3 {
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 2;
@@ -412,7 +382,7 @@ footer address a:hover {
   margin: 0 0 10px 0;
 }
 
-.portfolio ul li figure figcaption {
+.projects ul li figure figcaption {
   font-size: 1rem;
   line-height: 1.875;
   letter-spacing: 0.03em;
@@ -420,7 +390,7 @@ footer address a:hover {
   margin: 15px auto 0 auto;
 }
 
-.portfolio figcaption {
+.projects figcaption {
   width: 322px;
   height: 95px;
 }
