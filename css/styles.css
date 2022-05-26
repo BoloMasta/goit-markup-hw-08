@@ -53,15 +53,18 @@ div.menu > a.logo span {
 
 div.menu {
   display: flex;
-  width: auto;
   height: 80px;
-  border-bottom: 1px solid var(--menu-border);
+
   align-items: center;
   justify-content: space-between;
 }
 
 .menu nav {
-  margin-right: 125px;
+  flex-grow: 5;
+}
+
+.menu a {
+  flex-grow: 1;
 }
 
 .menu nav ul {
@@ -146,21 +149,19 @@ div.menu > :nth-child(n + 2):active {
 
 .advantages {
   margin: 0 auto;
-  display: flex;
 }
 
 .advantages ul {
-  float: left;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .advantages ul li {
-  margin: 15px;
-  display: block;
-  float: left;
-  padding: 0;
+  margin: 0 15px;
 }
 
 .advantages ul li h3 {
@@ -245,7 +246,7 @@ div.menu > :nth-child(n + 2):active {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin: 0px 15px;
+  margin: 15px;
 }
 
 .our-team ul li figure {
@@ -311,6 +312,10 @@ footer address a:hover {
 
 /* Filters */
 
+section.filters {
+  border-top: 1px solid var(--menu-border);
+}
+
 .filters {
   display: flex;
 }
@@ -347,14 +352,13 @@ footer address a:hover {
 
 .projects ul {
   list-style: none;
-  width: 1170px;
-  height: 1360px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
   margin-top: -10px;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .projects figure {
