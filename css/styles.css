@@ -112,11 +112,30 @@ footer > a,
   color: var(--blue);
 }
 
-/* Lead */
+.menu > div > :nth-child(3)::before {
+  display: inline-flex;
+  margin-right: 10px;
+  content: "";
+  width: 16px;
+  height: 12px;
+  background-image: url("../images/envelope.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ===== Lead =====*/
+
+section.lead {
+  margin: 0 auto;
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: url("../images/BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
 
 .lead {
   height: 600px;
-  background-color: var(--dark-grey);
   display: flex;
   align-items: center;
 }
@@ -128,7 +147,7 @@ footer > a,
   color: var(--white);
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.24rem;
   margin: 30px 0;
   max-width: 696px;
 }
@@ -166,6 +185,22 @@ footer > a,
 
 .advantages ul li {
   margin: 0 15px;
+}
+.advantages .icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.advantages svg {
+  width: 270px;
+  height: 120px;
+  background-color: var(--light-grey);
+  border-radius: 4px;
+  outline: 1px solid black;
 }
 
 .advantages ul li h3 {
@@ -357,6 +392,12 @@ footer > a,
   height: 95px;
 }
 
+.projects ul li:active,
+.projects ul li:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 /* Footer */
 
 footer {
@@ -377,7 +418,7 @@ footer address {
   margin-bottom: 60px;
   letter-spacing: 0.03em;
   font-size: 0.875rem;
-  line-height: 1.71;
+  line-height: 2.11;
   clear: left;
   font-style: normal;
 }
