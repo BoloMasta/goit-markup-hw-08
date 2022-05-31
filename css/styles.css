@@ -17,15 +17,15 @@ body {
   font-size: 16px;
 }
 
+section {
+  padding: 94px 0;
+}
+
 /* Container */
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-section {
-  padding: 94px 0;
 }
 
 /* Logo */
@@ -36,7 +36,7 @@ footer > div > a.logo {
 }
 
 footer > div > a.logo,
-div.menu > a.logo {
+header.menu > div > a.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 1.625rem;
@@ -45,51 +45,54 @@ div.menu > a.logo {
 }
 
 footer > div > a.logo span,
-div.menu > a.logo span {
+header.menu > div > a.logo span {
   color: var(--blue);
 }
 
 /* Nav */
 
-div.menu {
+header {
+  border-bottom: 1px solid var(--menu-border);
+}
+
+.menu > div {
   display: flex;
   height: 80px;
-
   align-items: center;
   justify-content: space-between;
 }
 
-.menu nav {
+.menu > div > nav {
   flex-grow: 5;
 }
 
-.menu a {
-  flex-grow: 1;
+.menu > div > a {
+  flex-grow: 1.5;
 }
 
-.menu nav ul {
+.menu > div > nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menu nav ul li {
+.menu > div > nav ul li {
   display: inline;
   min-width: 300px;
 }
 
-.menu nav ul li:nth-child(2) {
+.menu > div > nav ul li:nth-child(2) {
   margin: 0 46px;
 }
 
-.menu nav ul li a:focus,
-.menu nav ul li a:hover,
-.menu nav ul li a:active {
+.menu > div > nav ul li a:focus,
+.menu > div > nav ul li a:hover,
+.menu > div > nav ul li a:active {
   color: var(--blue);
 }
 
 footer > a,
-.menu a {
+.menu > div a {
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.14;
@@ -98,26 +101,27 @@ footer > a,
   text-decoration: none;
 }
 
-div.menu > :nth-child(n + 3) {
+.menu > div > :nth-child(n + 3) {
   color: var(--grey);
+  text-align: right;
 }
 
-div.menu > :nth-child(n + 2):focus,
-div.menu > :nth-child(n + 2):hover,
-div.menu > :nth-child(n + 2):active {
+.menu > div > :nth-child(n + 2):focus,
+.menu > div > :nth-child(n + 2):hover,
+.menu > div > :nth-child(n + 2):active {
   color: var(--blue);
 }
 
-/* Header */
+/* Lead */
 
-.header {
+.lead {
   height: 600px;
   background-color: var(--dark-grey);
   display: flex;
   align-items: center;
 }
 
-.header h1 {
+.lead h1 {
   font-weight: 900;
   font-size: 2.75rem;
   line-height: 1.36;
@@ -129,7 +133,7 @@ div.menu > :nth-child(n + 2):active {
   max-width: 696px;
 }
 
-.header button {
+.lead button {
   background-color: var(--blue);
   color: var(--white);
   width: 200px;
@@ -273,48 +277,7 @@ div.menu > :nth-child(n + 2):active {
   padding: 15px;
 }
 
-/* Footer */
-
-footer {
-  height: 252px;
-  background-color: var(--dark-grey);
-  color: var(--white);
-}
-
-footer a.logo {
-  font-size: 1.625rem;
-  line-height: 1.19;
-  padding-top: 50px;
-  float: left;
-  margin-bottom: 10px;
-}
-
-footer address {
-  margin-bottom: 60px;
-  letter-spacing: 0.03em;
-  font-size: 0.875rem;
-  line-height: 1.71;
-  clear: left;
-  font-style: normal;
-}
-
-footer address a:visited,
-footer address a {
-  text-decoration: none;
-  color: var(--footer-adres);
-}
-
-footer address a:active,
-footer address a:focus,
-footer address a:hover {
-  color: var(--blue);
-}
-
 /* Filters */
-
-section.filters {
-  border-top: 1px solid var(--menu-border);
-}
 
 .filters {
   display: flex;
@@ -353,11 +316,10 @@ section.filters {
 .projects ul {
   list-style: none;
   padding: 0;
+  margin-left: -20px;
+  margin-top: -20px;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-top: -10px;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -367,12 +329,10 @@ section.filters {
 
 .projects ul li {
   float: left;
-  width: 370px;
-  height: 404px;
   background: var(--white);
   border: 1px solid #eeeeee;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .projects ul li figure h3 {
@@ -395,4 +355,41 @@ section.filters {
 .projects figcaption {
   width: 322px;
   height: 95px;
+}
+
+/* Footer */
+
+footer {
+  height: 252px;
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+footer a.logo {
+  font-size: 1.625rem;
+  line-height: 1.19;
+  padding-top: 50px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+footer address {
+  margin-bottom: 60px;
+  letter-spacing: 0.03em;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  clear: left;
+  font-style: normal;
+}
+
+footer address a:visited,
+footer address a {
+  text-decoration: none;
+  color: var(--footer-adres);
+}
+
+footer address a:active,
+footer address a:focus,
+footer address a:hover {
+  color: var(--blue);
 }
