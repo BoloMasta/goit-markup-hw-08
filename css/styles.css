@@ -118,10 +118,18 @@ footer > a,
   content: "";
   width: 16px;
   height: 12px;
-  background-image: url("../images/envelope.svg");
+  background-image: url("../images/mail.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.menu > div > :nth-child(4)::before {
+  content: url("../images/smartphone.svg");
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
 
 /* ===== Lead =====*/
 
@@ -195,13 +203,12 @@ section.lead {
   fill: currentColor;
 }
 
-.advantages svg {
+ .advantages svg {
   width: 270px;
   height: 120px;
   background-color: var(--light-grey);
   border-radius: 4px;
-  outline: 1px solid black;
-}
+} 
 
 .advantages ul li h3 {
   font-weight: 700;
@@ -312,6 +319,41 @@ section.lead {
   padding: 15px;
 }
 
+/* Nasi klienci */
+
+.customers {
+  text-align: center;
+}
+
+.customers h2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin-top: 0px;
+}
+
+.customers ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.customers ul li {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  float: left;
+}
+
+.customers ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Filters */
 
 .filters {
@@ -415,12 +457,32 @@ footer a.logo {
 }
 
 footer address {
+  width: 246px;
+  height: auto;
   margin-bottom: 60px;
   letter-spacing: 0.03em;
   font-size: 0.875rem;
   line-height: 2.11;
   clear: left;
   font-style: normal;
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
+
+.social {
+  width: 206px;
+  height: 80px;
+  float: left;
+  margin: -50px auto 0 100px;
+}
+
+.social h4 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 footer address a:visited,
