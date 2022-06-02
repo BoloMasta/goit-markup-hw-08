@@ -130,7 +130,6 @@ footer > a,
   margin-right: 10px;
 }
 
-
 /* ===== Lead =====*/
 
 section.lead {
@@ -192,23 +191,26 @@ section.lead {
 }
 
 .advantages ul li {
-  margin: 0 15px;
-}
-.advantages .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  width: 270px;
 }
 
- .advantages svg {
+.advantages ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.advantages-icon-container {
   width: 270px;
   height: 120px;
   background-color: var(--light-grey);
   border-radius: 4px;
-} 
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages svg {
+}
 
 .advantages ul li h3 {
   font-weight: 700;
@@ -295,6 +297,11 @@ section.lead {
   margin: 15px;
 }
 
+.our-team ul li img {
+  width: 270px;
+  height: 260px;
+}
+
 .our-team ul li figure {
   width: 270px;
   height: 368px;
@@ -348,6 +355,9 @@ section.lead {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .customers ul li:not(:last-child) {
@@ -495,4 +505,95 @@ footer address a:active,
 footer address a:focus,
 footer address a:hover {
   color: var(--blue);
+}
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-antenna {
+  width: 70px;
+  height: 70px;
+  background-position: 0 0;
+}
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+  background-position: -48px 0;
+}
+.icon-clock {
+  width: 70px;
+  height: 70px;
+  background-position: -96px 0;
+}
+.icon-diagram {
+  width: 70px;
+  height: 70px;
+  background-position: -144px 0;
+}
+.icon-facebook1 {
+  width: 32px;
+  height: 32px;
+  background-position: -192px 0;
+}
+.icon-instagram1 {
+  width: 32px;
+  height: 32px;
+  background-position: -240px 0;
+}
+.icon-linkedin1 {
+  width: 32px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.icon-Logo1 {
+  width: 112px;
+  height: 64px;
+  background-position: -336px 0;
+}
+
+.icon-Logo1 use {
+  fill: red;
+}
+
+.icon-Logo2 {
+  width: 56px;
+  height: 32px;
+  background-position: -432px 0;
+}
+.icon-Logo3 {
+  width: 57px;
+  height: 32px;
+  background-position: -528px 0;
+}
+.icon-Logo4 {
+  width: 65px;
+  height: 32px;
+  background-position: -624px 0;
+}
+.icon-Logo5 {
+  width: 57px;
+  height: 32px;
+  background-position: 0 -48px;
+}
+.icon-Logo6 {
+  width: 57px;
+  height: 32px;
+  background-position: -96px -48px;
+}
+.icon-mail {
+  width: 43px;
+  height: 32px;
+  background-position: -192px -48px;
+}
+.icon-smartphone {
+  width: 20px;
+  height: 32px;
+  background-position: -288px -48px;
+}
+.icon-twitter1 {
+  width: 32px;
+  height: 32px;
+  background-position: -336px -48px;
 }
