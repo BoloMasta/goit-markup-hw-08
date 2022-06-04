@@ -1,0 +1,86 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-logo1 {
+  width: 27px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-logo2 {
+  width: 24px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-logo3 {
+  width: 34px;
+  height: 32px;
+  background-position: -96px 0;
+}
+.icon-logo4 {
+  width: 65px;
+  height: 32px;
+  background-position: -144px 0;
+}
+.icon-logo5 {
+  width: 43px;
+  height: 32px;
+  background-position: -240px 0;
+}
+.icon-logo6 {
+  width: 67px;
+  height: 32px;
+  background-position: -336px 0;
+}
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+  background-position: -432px 0;
+}
+.icon-instagram {
+  width: 32px;
+  height: 32px;
+  background-position: -480px 0;
+}
+.icon-linkedin {
+  width: 32px;
+  height: 32px;
+  background-position: -528px 0;
+}
+.icon-twitter {
+  width: 32px;
+  height: 32px;
+  background-position: -576px 0;
+}
+.icon-antenna {
+  width: 32px;
+  height: 32px;
+  background-position: -624px 0;
+}
+.icon-astronaut {
+  width: 32px;
+  height: 32px;
+  background-position: -672px 0;
+}
+.icon-clock {
+  width: 32px;
+  height: 32px;
+  background-position: -720px 0;
+}
+.icon-diagram {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -48px;
+}
+.icon-mail {
+  width: 43px;
+  height: 32px;
+  background-position: -48px -48px;
+}
+.icon-smartphone {
+  width: 20px;
+  height: 32px;
+  background-position: -144px -48px;
+}
+
