@@ -1,14 +1,15 @@
 :root {
   --blue: #2196f3;
-  --black: #212121;
-  --light-grey: #f5f4fa;
-  --grey: #757575;
-  --dark-grey: #2f303a;
   --white: #ffffff;
   --menu-border: #ececec;
   --icons: #afb1b8;
+  --light-grey: #f5f4fa;
+  --grey: #757575;
+  --dark-grey: #2f303a;
+  --black: #212121;
   --button-border: rgba(0, 0, 0, 0.15);
   --footer-adres: rgba(255, 255, 255, 0.6);
+  --footer-social-links-item: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -22,7 +23,7 @@ section {
   padding: 94px 0;
 }
 
-/* Container */
+/*===== CONTAINER =====*/
 
 .container {
   max-width: 1200px;
@@ -35,7 +36,7 @@ section {
   background-image: url(icons.svg);
 }
 
-/* Logo */
+/*===== LOGO =====*/
 
 footer > div > a.logo {
   color: var(--white);
@@ -56,7 +57,7 @@ header.menu > div > a.logo span {
   color: var(--blue);
 }
 
-/* Nav */
+/*===== NAV =====*/
 
 header {
   border-bottom: 1px solid var(--menu-border);
@@ -70,17 +71,17 @@ header {
 }
 
 .menu > div > nav {
-  flex-grow: 5;
+  flex-grow: 1;
 }
 
-.menu > div > a {
-  flex-grow: 1.5;
+.menu > div :nth-child(3) {
+  margin-right: 30px;
 }
 
 .menu > div > nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 93px;
 }
 
 .menu > div > nav ul li {
@@ -111,6 +112,9 @@ footer > a,
 .menu > div > :nth-child(n + 3) {
   color: var(--grey);
   text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .menu > div > a:hover > svg > use {
@@ -129,6 +133,7 @@ footer > a,
   background-position: -48px -48px;
   fill: var(--grey);
   margin-right: 10px;
+  top: 50%;
 }
 
 .icon-smartphone {
@@ -139,7 +144,7 @@ footer > a,
   margin-right: 10px;
 }
 
-/* ===== Lead =====*/
+/*===== LEAD =====*/
 
 section.lead {
   margin: 0 auto;
@@ -184,10 +189,11 @@ section.lead {
   cursor: pointer;
 }
 
-/* Nasz atuty */
+/*===== NASZE ATUTY =====*/
 
 .advantages {
   margin: 0 auto;
+  padding-bottom: 0px;
 }
 
 .advantages ul {
@@ -259,7 +265,7 @@ section.lead {
   background-position: 0 -48px;
 }
 
-/* Czym się zajmujemy */
+/*===== CZYM SIĘ ZAJMUJEMY =====*/
 
 .what-we-do {
   clear: both;
@@ -291,7 +297,7 @@ section.lead {
   display: inline-block;
 }
 
-/* Nasz zespół */
+/*===== NASZ ZESPÓŁ =====*/
 
 .our-team {
   background: var(--light-grey);
@@ -317,7 +323,7 @@ section.lead {
 
 .our-team ul li {
   width: 270px;
-  height: 368px;
+  height: 428px;
   float: left;
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -333,7 +339,6 @@ section.lead {
 
 .our-team ul li figure {
   width: 270px;
-  height: 368px;
   text-align: center;
   margin: 0;
 }
@@ -355,7 +360,57 @@ section.lead {
   padding: 15px;
 }
 
-/* Nasi klienci */
+/*===== SOCIAL LINKS =====*/
+
+.social-links {
+  max-width: 206px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.social-links-item {
+  width: 44px;
+  height: 44px;
+  background-color: inherit;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons);
+}
+
+.icon-facebook {
+  width: 20px;
+  height: 20px;
+  background-position: -432px 0;
+}
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+  background-position: -480px 0;
+}
+.icon-linkedin {
+  width: 20px;
+  height: 20px;
+  background-position: -528px 0;
+}
+.icon-twitter {
+  width: 20px;
+  height: 20px;
+  background-position: -576px 0;
+}
+
+.social-links-item:hover {
+  background-color: var(--blue);
+}
+
+.social-links-item:hover svg use {
+  fill: var(--white);
+}
+
+/*===== NASI KLIENCI =====*/
 
 .customers {
   text-align: center;
@@ -440,7 +495,7 @@ section.lead {
   fill: var(--blue);
 }
 
-/* Filters */
+/*===== FILTERS =====*/
 
 .filters {
   display: flex;
@@ -470,7 +525,7 @@ section.lead {
   color: var(--white);
 }
 
-/* Projects */
+/*===== PROJECTS =====*/
 
 .projects {
   margin-top: -100px;
@@ -524,9 +579,10 @@ section.lead {
 .projects ul li:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
-/* Footer */
+/*===== FOOTER =====*/
 
 footer {
   height: 252px;
@@ -583,23 +639,18 @@ footer address a:hover {
   color: var(--blue);
 }
 
-.icon-facebook {
-  width: 32px;
-  height: 32px;
-  background-position: -432px 0;
+.social-links-item-footer {
+  width: 44px;
+  height: 44px;
+  background-color: inherit;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white);
+  background-color: var(--footer-social-links-item);
 }
-.icon-instagram {
-  width: 32px;
-  height: 32px;
-  background-position: -480px 0;
-}
-.icon-linkedin {
-  width: 32px;
-  height: 32px;
-  background-position: -528px 0;
-}
-.icon-twitter {
-  width: 32px;
-  height: 32px;
-  background-position: -576px 0;
+
+.social-links-item-footer:hover {
+  background-color: var(--blue);
 }
