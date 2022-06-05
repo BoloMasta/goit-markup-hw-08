@@ -6,6 +6,7 @@
   --dark-grey: #2f303a;
   --white: #ffffff;
   --menu-border: #ececec;
+  --icons: #afb1b8;
   --button-border: rgba(0, 0, 0, 0.15);
   --footer-adres: rgba(255, 255, 255, 0.6);
 }
@@ -26,6 +27,12 @@ section {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(icons.svg);
 }
 
 /* Logo */
@@ -106,27 +113,29 @@ footer > a,
   text-align: right;
 }
 
+.menu > div > a:hover > svg > use {
+  fill: var(--blue);
+}
+
 .menu > div > :nth-child(n + 2):focus,
 .menu > div > :nth-child(n + 2):hover,
 .menu > div > :nth-child(n + 2):active {
   color: var(--blue);
 }
 
-.menu > div > :nth-child(3)::before {
-  display: inline-flex;
-  margin-right: 10px;
-  content: "";
+.icon-mail {
   width: 16px;
   height: 12px;
-  background-image: url("../images/mail.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: -48px -48px;
+  fill: var(--grey);
+  margin-right: 10px;
 }
 
-.menu > div > :nth-child(4)::before {
-  content: url("../images/smartphone.svg");
-  width: 16px;
-  height: 12px;
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  background-position: -144px -48px;
+  fill: var(--grey);
   margin-right: 10px;
 }
 
@@ -195,7 +204,7 @@ section.lead {
 }
 
 .advantages ul li:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .advantages-icon-container {
@@ -207,9 +216,6 @@ section.lead {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.advantages svg {
 }
 
 .advantages ul li h3 {
@@ -232,6 +238,27 @@ section.lead {
   margin: 0;
 }
 
+.icon-antenna {
+  width: 70px;
+  height: 70px;
+  background-position: -624px 0;
+}
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+  background-position: -672px 0;
+}
+.icon-clock {
+  width: 70px;
+  height: 70px;
+  background-position: -720px 0;
+}
+.icon-diagram {
+  width: 70px;
+  height: 70px;
+  background-position: 0 -48px;
+}
+
 /* Czym się zajmujemy */
 
 .what-we-do {
@@ -251,6 +278,8 @@ section.lead {
 
 .what-we-do img {
   margin: 12px;
+  width: 370px;
+  height: 294px;
 }
 
 .what-we-do ul {
@@ -362,6 +391,53 @@ section.lead {
 
 .customers ul li:not(:last-child) {
   margin-right: 30px;
+}
+
+.icon-logo1 {
+  width: 41px;
+  height: 46.7px;
+  background-position: 0 0;
+  fill: var(--icons);
+}
+.icon-logo2 {
+  width: 40px;
+  height: 52px;
+  background-position: -48px 0;
+  fill: var(--icons);
+}
+.icon-logo3 {
+  width: 43.46px;
+  height: 41.18px;
+  background-position: -96px 0;
+  fill: var(--icons);
+}
+.icon-logo4 {
+  width: 84.44px;
+  height: 40.62px;
+  background-position: -144px 0;
+  fill: var(--icons);
+}
+.icon-logo5 {
+  width: 62.54px;
+  height: 45.43px;
+  background-position: -240px 0;
+  fill: var(--icons);
+}
+.icon-logo6 {
+  width: 93.79px;
+  height: 43.93px;
+  background-position: -336px 0;
+  fill: var(--icons);
+}
+
+.customers ul li:hover {
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  box-shadow: 0 0 3px var(--blue);
+}
+
+.customers ul li:hover svg use {
+  fill: var(--blue);
 }
 
 /* Filters */
@@ -507,44 +583,6 @@ footer address a:hover {
   color: var(--blue);
 }
 
-.icon {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-image: url(sprite.svg);
-}
-.icon-logo1 {
-  width: 41px;
-  height: 46.7px;
-  background-position: 0 0;
-  color: #212121;
-  display: inline-flex;
-}
-.icon-logo2 {
-  width: 24px;
-  height: 32px;
-  background-position: -48px 0;
-    color: #212121;
-}
-.icon-logo3 {
-  width: 34px;
-  height: 32px;
-  background-position: -96px 0;
-}
-.icon-logo4 {
-  width: 65px;
-  height: 32px;
-  background-position: -144px 0;
-}
-.icon-logo5 {
-  width: 43px;
-  height: 32px;
-  background-position: -240px 0;
-}
-.icon-logo6 {
-  width: 67px;
-  height: 32px;
-  background-position: -336px 0;
-}
 .icon-facebook {
   width: 32px;
   height: 32px;
@@ -564,34 +602,4 @@ footer address a:hover {
   width: 32px;
   height: 32px;
   background-position: -576px 0;
-}
-.icon-antenna {
-  width: 70px;
-  height: 70px;
-  background-position: -624px 0;
-}
-.icon-astronaut {
-  width: 70px;
-  height: 70px;
-  background-position: -672px 0;
-}
-.icon-clock {
-  width: 70px;
-  height: 70px;
-  background-position: -720px 0;
-}
-.icon-diagram {
-  width: 70px;
-  height: 70px;
-  background-position: 0 -48px;
-}
-.icon-mail {
-  width: 43px;
-  height: 32px;
-  background-position: -48px -48px;
-}
-.icon-smartphone {
-  width: 20px;
-  height: 32px;
-  background-position: -144px -48px;
 }
