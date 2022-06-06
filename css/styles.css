@@ -1,21 +1,64 @@
 :root {
-  --blue: #2196f3;
-  --white: #ffffff;
+  /* MENU */
+  --body-base-color: #000000;
+  --menu-logo-1-part: #2196f3;
+  --menu-logo-2-part: #000000;
+  --menu-nav: #212121;
+  --menu-contact-links: #757575;
+  --menu-highlight: #2196f3;
   --menu-border: #ececec;
-  --icons: #afb1b8;
-  --light-grey: #f5f4fa;
-  --grey: #757575;
-  --dark-grey: #2f303a;
-  --black: #212121;
-  --button-border: rgba(0, 0, 0, 0.15);
-  --footer-adres: rgba(255, 255, 255, 0.6);
-  --footer-social-links-item: rgba(255, 255, 255, 0.1);
+  --heading: #212121;
+
+  /* LEAD */
+  --lead-background: rgba(47, 48, 58, 0.4);
+  --lead-text: #ffffff;
+  --lead-button: #2196f3;
+  --lead-button-shadow: rgba(0, 0, 0, 0.15);
+
+  /* ADVANTAGES */
+  --advantages-background: #f5f4fa;
+  --advantages-heading: #212121;
+  --advantages-text: #757575;
+
+  /* OUR TEAM */
+  --our-team-heading: #212121;
+  --our-team-text: #757575;
+  --out-team-background: #f5f4fa;
+  --our-team-card-background: #ffffff;
+
+  /* ICONS */
+  --icon: #afb1b8;
+  --icon-highlight: #ffffff;
+  --icon-highlight-background: #2196f3;
+
+  /* FILTERS */
+  --filters-button-text: #212121;
+  --filters-button-background: #f5f4fa;
+  --filters-button-highlight-background: #2196f3;
+  --filters-button-highlight-text: #ffffff;
+
+  /* PROJECTS */
+  --projects-heading: #212121;
+  --projects-text: #757575;
+  --projects-background: #ffffff;
+  --projects-border: #eeeeee;
+
+  /* FOOTER */
+  --footer-logo-1-part: #2196f3;
+  --footer-logo-2-part: #ffffff;
+  --footer-background: #2f303a;
+  --footer-address: #ffffff;
+  --footer-address-links: rgba(255, 255, 255, 0.6);
+  --footer-address-links-highlight: #2196f3;
+  --footer-social-links-item-backround: rgba(255, 255, 255, 0.1);
+  --footer-social-links-item-highlight: #ffffff;
+  --footer-social-links-item-highlight-backround: #2196f3;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  color: var(--black);
+  color: var(--body-base-color);
   font-size: 16px;
 }
 
@@ -38,13 +81,8 @@ section {
 
 /*===== LOGO =====*/
 
+header.menu > div > a.logo,
 footer > div > a.logo {
-  color: var(--white);
-  text-decoration: none;
-}
-
-footer > div > a.logo,
-header.menu > div > a.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 1.625rem;
@@ -52,9 +90,17 @@ header.menu > div > a.logo {
   letter-spacing: 0.03rem;
 }
 
-footer > div > a.logo span,
 header.menu > div > a.logo span {
-  color: var(--blue);
+  color: var(--menu-logo-1-part);
+}
+
+footer > div > a.logo span {
+  color: var(--footer-logo-1-part);
+}
+
+footer > div > a.logo {
+  color: var(--footer-logo-2-part);
+  text-decoration: none;
 }
 
 /*===== NAV =====*/
@@ -89,6 +135,10 @@ header {
   min-width: 300px;
 }
 
+.menu > div > nav ul li a {
+  color: var(--menu-nav);
+}
+
 .menu > div > nav ul li:nth-child(2) {
   margin: 0 46px;
 }
@@ -96,7 +146,7 @@ header {
 .menu > div > nav ul li a:focus,
 .menu > div > nav ul li a:hover,
 .menu > div > nav ul li a:active {
-  color: var(--blue);
+  color: var(--menu-highlight);
 }
 
 footer > a,
@@ -105,12 +155,12 @@ footer > a,
   font-size: 0.875rem;
   line-height: 1.14;
   letter-spacing: 0.02rem;
-  color: var(--black);
+  color: var(--menu-logo-2-part);
   text-decoration: none;
 }
 
 .menu > div > :nth-child(n + 3) {
-  color: var(--grey);
+  color: var(--menu-contact-links);
   text-align: right;
   display: flex;
   justify-content: end;
@@ -118,20 +168,20 @@ footer > a,
 }
 
 .menu > div > a:hover > svg > use {
-  fill: var(--blue);
+  fill: var(--menu-highlight);
 }
 
 .menu > div > :nth-child(n + 2):focus,
 .menu > div > :nth-child(n + 2):hover,
 .menu > div > :nth-child(n + 2):active {
-  color: var(--blue);
+  color: var(--menu-highlight);
 }
 
 .icon-mail {
   width: 16px;
   height: 12px;
   background-position: -48px -48px;
-  fill: var(--grey);
+  fill: var(--menu-contact-links);
   margin-right: 10px;
   top: 50%;
 }
@@ -140,7 +190,7 @@ footer > a,
   width: 10px;
   height: 16px;
   background-position: -144px -48px;
-  fill: var(--grey);
+  fill: var(--menu-contact-links);
   margin-right: 10px;
 }
 
@@ -150,8 +200,8 @@ section.lead {
   margin: 0 auto;
   background-image: linear-gradient(
       to bottom,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      var(--lead-background),
+      var(--lead-background)
     ),
     url("../images/BG.jpg");
   background-repeat: no-repeat;
@@ -169,7 +219,7 @@ section.lead {
   font-weight: 900;
   font-size: 2.75rem;
   line-height: 1.36;
-  color: var(--white);
+  color: var(--lead-text);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.24rem;
@@ -178,8 +228,8 @@ section.lead {
 }
 
 .lead button {
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--lead-button);
+  color: var(--lead-text);
   width: 200px;
   height: 50px;
   font-size: 1rem;
@@ -187,7 +237,7 @@ section.lead {
   line-height: 1.875;
   display: block;
   letter-spacing: 0.06rem;
-  box-shadow: 0px 4px 4px var(--button-border);
+  box-shadow: 0px 4px 4px var(--lead-button-shadow);
   border-radius: 4px;
   margin: 0 auto;
   cursor: pointer;
@@ -220,7 +270,7 @@ section.lead {
 .advantages-icon-container {
   width: 270px;
   height: 120px;
-  background-color: var(--light-grey);
+  background-color: var(--advantages-background);
   border-radius: 4px;
   margin-bottom: 28px;
   display: flex;
@@ -244,7 +294,7 @@ section.lead {
   letter-spacing: 0.03rem;
   width: 270px;
   text-align: justify;
-  color: var(--grey);
+  color: var(--advantages-text);
   margin: 0;
 }
 
@@ -282,7 +332,7 @@ section.lead {
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: var(--heading);
   margin-top: 0px;
 }
 
@@ -304,7 +354,7 @@ section.lead {
 /*===== NASZ ZESPÓŁ =====*/
 
 .our-team {
-  background: var(--light-grey);
+  background: var(--out-team-background);
   text-align: center;
 }
 
@@ -314,7 +364,7 @@ section.lead {
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: var(--heading);
   margin-top: 0px;
 }
 
@@ -329,7 +379,7 @@ section.lead {
   width: 270px;
   height: 428px;
   float: left;
-  background: var(--white);
+  background: var(--our-team-card-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -351,7 +401,7 @@ section.lead {
   font-size: 1rem;
   line-height: 1.1875;
   letter-spacing: 0.03em;
-  color: var(--grey);
+  color: var(--our-team-text);
 }
 
 .our-team ul li figure figcaption b {
@@ -360,7 +410,7 @@ section.lead {
   line-height: 1.1875;
   display: block;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: var(--our-team-heading);
   padding: 15px;
 }
 
@@ -382,7 +432,7 @@ section.lead {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 
 .icon-facebook {
@@ -407,11 +457,11 @@ section.lead {
 }
 
 .social-links-item:hover {
-  background-color: var(--blue);
+  background-color: var(--icon-highlight-background);
 }
 
 .social-links-item:hover svg use {
-  fill: var(--white);
+  fill: var(--icon-highlight);
 }
 
 /*===== NASI KLIENCI =====*/
@@ -426,7 +476,7 @@ section.lead {
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: var(--heading);
   margin-top: 0px;
 }
 
@@ -440,7 +490,7 @@ section.lead {
 .customers ul li {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon);
   border-radius: 4px;
   float: left;
   display: flex;
@@ -456,47 +506,47 @@ section.lead {
   width: 41px;
   height: 46.7px;
   background-position: 0 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 .icon-logo2 {
   width: 40px;
   height: 52px;
   background-position: -48px 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 .icon-logo3 {
   width: 43.46px;
   height: 41.18px;
   background-position: -96px 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 .icon-logo4 {
   width: 84.44px;
   height: 40.62px;
   background-position: -144px 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 .icon-logo5 {
   width: 62.54px;
   height: 45.43px;
   background-position: -240px 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 .icon-logo6 {
   width: 93.79px;
   height: 43.93px;
   background-position: -336px 0;
-  fill: var(--icons);
+  fill: var(--icon);
 }
 
 .customers ul li:hover {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--icon-highlight-background);
   cursor: pointer;
-  box-shadow: 0 0 3px var(--blue);
+  box-shadow: 0 0 3px var(--icon-highlight-background);
 }
 
 .customers ul li:hover svg use {
-  fill: var(--blue);
+  fill: var(--icon-highlight-background);
 }
 
 /*===== FILTERS =====*/
@@ -507,14 +557,14 @@ section.lead {
 
 .filters button {
   font-family: "Roboto";
-  background: var(--light-grey);
+  background: var(--filters-button-background);
   border-radius: 4px;
   font-weight: 500;
   font-size: 1em;
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: var(--filters-button-text);
   padding: 5px 25px;
   margin: 4px;
   border: none;
@@ -523,16 +573,16 @@ section.lead {
 
 .filters button:focus,
 .filters button:hover {
-  background: var(--blue);
+  background: var(--filters-button-highlight-background);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--white);
+  color: var(--filters-button-highlight-text);
 }
 
 /*===== PROJECTS =====*/
 
 .projects {
-  margin-top: -100px;
+  margin-top: -140px;
 }
 
 .projects ul {
@@ -551,8 +601,8 @@ section.lead {
 
 .projects ul li {
   float: left;
-  background: var(--white);
-  border: 1px solid #eeeeee;
+  background: var(--projects-background);
+  border: 1px solid var(--projects-border);
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -562,7 +612,7 @@ section.lead {
   font-size: 1.1rem;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--black);
+  color: var(--projects-heading);
   margin: 0 0 10px 0;
 }
 
@@ -570,7 +620,7 @@ section.lead {
   font-size: 1rem;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: var(--grey);
+  color: var(--projects-text);
   margin: 15px auto 0 auto;
 }
 
@@ -590,8 +640,8 @@ section.lead {
 
 footer {
   height: 252px;
-  background-color: var(--dark-grey);
-  color: var(--white);
+  background-color: var(--footer-background);
+  color: var(--footer-address);
 }
 
 footer a.logo {
@@ -612,7 +662,6 @@ footer address {
   clear: left;
   font-style: normal;
   margin: 0;
-  display: inline-block;
   float: left;
 }
 
@@ -628,19 +677,19 @@ footer address {
   line-height: 1rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--footer-address);
 }
 
 footer address a:visited,
 footer address a {
   text-decoration: none;
-  color: var(--footer-adres);
+  color: var(--footer-address-links);
 }
 
 footer address a:active,
 footer address a:focus,
 footer address a:hover {
-  color: var(--blue);
+  color: var(--footer-address-links-highlight);
 }
 
 .social-links-item-footer {
@@ -651,10 +700,10 @@ footer address a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--white);
-  background-color: var(--footer-social-links-item);
+  fill: var(--footer-social-links-item-highlight);
+  background-color: var(--footer-social-links-item-backround);
 }
 
 .social-links-item-footer:hover {
-  background-color: var(--blue);
+  background-color: var(--footer-social-links-item-highlight-backround);
 }
