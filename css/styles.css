@@ -144,6 +144,7 @@ header {
 
 .menu > div > nav ul li a {
   color: var(--menu-nav);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu > div > nav ul li:nth-child(2) {
@@ -154,7 +155,6 @@ header {
 .menu > div > nav ul li a:hover,
 .menu > div > nav ul li a:active {
   color: var(--menu-highlight);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer > a,
@@ -177,6 +177,9 @@ footer > a,
 
 .menu > div > a:hover > svg > use {
   fill: var(--menu-highlight);
+}
+
+.menu > div > a > svg > use {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -184,6 +187,9 @@ footer > a,
 .menu > div > :nth-child(n + 2):hover,
 .menu > div > :nth-child(n + 2):active {
   color: var(--menu-highlight);
+}
+
+.menu > div > :nth-child(n + 2) {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -460,6 +466,7 @@ section.lead {
   justify-content: center;
   align-items: center;
   fill: var(--icon);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-facebook {
@@ -485,12 +492,14 @@ section.lead {
 
 .social-links-item:hover {
   background-color: var(--icon-highlight-background);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links-item svg use {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-item:hover svg use {
   fill: var(--icon-highlight);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*===== NASI KLIENCI =====*/
@@ -525,6 +534,7 @@ section.lead {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: box-shadow, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers ul li:not(:last-child) {
@@ -572,12 +582,14 @@ section.lead {
   border: 1px solid var(--icon-highlight-background);
   cursor: pointer;
   box-shadow: 0 0 3px var(--icon-highlight-background);
-  transition: box-shadow, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers ul li svg use {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers ul li:hover svg use {
   fill: var(--icon-highlight-background);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*===== FILTERS =====*/
@@ -600,6 +612,8 @@ section.lead {
   margin: 4px;
   border: none;
   cursor: pointer;
+  transition: box-shadow, color,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters button:focus,
@@ -608,8 +622,6 @@ section.lead {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--filters-button-highlight-text);
-  transition: box-shadow, color,
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*===== PROJECTS =====*/
@@ -645,6 +657,7 @@ section.lead {
   border: 1px solid var(--projects-border);
   margin-left: 20px;
   margin-top: 20px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects ul li figure img {
@@ -701,7 +714,6 @@ section.lead {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects figure:hover .project-overlay {
@@ -737,6 +749,10 @@ footer address {
   float: left;
 }
 
+footer address a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social {
   width: 206px;
   height: 80px;
@@ -762,7 +778,6 @@ footer address a:active,
 footer address a:focus,
 footer address a:hover {
   color: var(--footer-address-links-highlight);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-item-footer {
@@ -775,11 +790,11 @@ footer address a:hover {
   align-items: center;
   fill: var(--footer-social-links-item-highlight);
   background-color: var(--footer-social-links-item-backround);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-item-footer:hover {
   background-color: var(--footer-social-links-item-highlight-backround);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*===== BACKDROP =====*/
@@ -791,6 +806,7 @@ footer address a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
