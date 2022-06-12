@@ -9,31 +9,31 @@
   --menu-border: #ececec;
   --heading: #212121;
 
+  /* ICONS */
+  --icon: #afb1b8;
+  --icon-highlight: #ffffff;
+  --icon-highlight-background: #2196f3;
+
   /* LEAD */
   --lead-background: rgba(47, 48, 58, 0.4);
   --lead-text: #ffffff;
   --lead-button: #2196f3;
   --lead-button-shadow: rgba(0, 0, 0, 0.15);
 
-  /* BACKDROP */
-  --modal-background: rgba(0, 0, 0, 0.2);
-  --modal-window: #ffffff;
-
   /* ADVANTAGES */
   --advantages-background: #f5f4fa;
   --advantages-heading: #212121;
   --advantages-text: #757575;
+
+  /* WHAT WE DO */
+  --what-we-do-label-text: #ffffff;
+  --what-we-do-label-background: rgba(47, 48, 58, 0.8);
 
   /* OUR TEAM */
   --our-team-heading: #212121;
   --our-team-text: #757575;
   --out-team-background: #f5f4fa;
   --our-team-card-background: #ffffff;
-
-  /* ICONS */
-  --icon: #afb1b8;
-  --icon-highlight: #ffffff;
-  --icon-highlight-background: #2196f3;
 
   /* FILTERS */
   --filters-button-text: #212121;
@@ -59,6 +59,10 @@
   --footer-social-links-item-backround: rgba(255, 255, 255, 0.1);
   --footer-social-links-item-highlight: #ffffff;
   --footer-social-links-item-highlight-backround: #2196f3;
+
+  /* BACKDROP */
+  --modal-background: rgba(0, 0, 0, 0.2);
+  --modal-window: #ffffff;
 }
 
 body {
@@ -367,21 +371,49 @@ section.lead {
   letter-spacing: 0.03em;
   color: var(--heading);
   margin-top: 0px;
+  margin-bottom: 50px;
 }
 
 .what-we-do img {
-  margin: 12px;
-  width: 370px;
-  height: 294px;
+  background-size: cover;
 }
 
 .what-we-do ul {
   list-style: none;
   padding: 0;
+  font-size: 0;
 }
 
 .what-we-do ul li {
   display: inline-block;
+}
+
+.what-we-do-box {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
+.what-we-do ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.what-we-do-label {
+  text-transform: uppercase;
+  color: var(--what-we-do-label-text);
+  background: var(--what-we-do-label-background);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 370px;
+  height: 70px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  padding-top: 27px;
 }
 
 /*===== NASZ ZESPÓŁ =====*/
@@ -399,6 +431,7 @@ section.lead {
   letter-spacing: 0.03em;
   color: var(--heading);
   margin-top: 0px;
+  margin-bottom: 35px;
 }
 
 .our-team ul {
@@ -812,7 +845,7 @@ footer address a:hover {
 .modal {
   position: fixed;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -820,7 +853,10 @@ footer address a:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    top 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
@@ -839,4 +875,16 @@ footer address a:hover {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.92) translate(-50%, -50%);
+  opacity: 0.5;
+  left: 50%;
+  top: 50%;
+}
+
+.backdrop.is-hidden {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
