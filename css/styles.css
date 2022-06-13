@@ -59,6 +59,10 @@
   --footer-social-links-item-backround: rgba(255, 255, 255, 0.1);
   --footer-social-links-item-highlight: #ffffff;
   --footer-social-links-item-highlight-backround: #2196f3;
+  --newsletter-border: rgba(255, 255, 255, 0.3);
+  --newsletter-mail: rgba(255, 255, 255, 0.6);
+  --newsletter-button: #2196f3;
+  --newsletter-button-text: #ffffff;
 
   /* BACKDROP */
   --modal-background: rgba(0, 0, 0, 0.2);
@@ -67,7 +71,10 @@
   /* FORM */
   --form-icon-not-active: #212121;
   --form-icon-active: #2196f3;
+  --form-text: #757575;
+  --form-input-border: rgba(33, 33, 33, 0.2);
   --form-comment-placeholder: rgba(117, 117, 117, 0.5);
+  --form-links: #2196f3;
   --form-button: #2196f3;
   --form-button-text: #ffffff;
 }
@@ -774,6 +781,7 @@ footer a.logo {
   padding-top: 50px;
   float: left;
   margin-bottom: 10px;
+  margin-left: 15px;
 }
 
 footer address {
@@ -785,7 +793,7 @@ footer address {
   line-height: 2.11;
   clear: left;
   font-style: normal;
-  margin: 0;
+  margin: 0 0 0 15px;
   float: left;
 }
 
@@ -797,7 +805,7 @@ footer address a {
   width: 206px;
   height: 80px;
   float: left;
-  margin: -50px auto 0 100px;
+  margin: -50px auto 0 70px;
 }
 
 .social h4 {
@@ -839,8 +847,7 @@ footer address a:hover {
 
 .newsletter {
   float: left;
-  margin-left: 78px;
-  margin-top: 72px;
+  margin: -50px auto 0 78px;
 }
 
 .newsletter h4 {
@@ -849,6 +856,46 @@ footer address a:hover {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--footer-address);
+}
+
+.newsletter input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid var(--newsletter-border);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--newsletter-mail);
+  padding: 15px;
+}
+
+.newsletter button {
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  color: var(--newsletter-button-text);
+  background: var(--newsletter-button);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.06em;
+  border: none;
+  padding: 0 28px 0 42px;
+  position: relative;
+  text-align: left;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  fill: var(--newsletter-button-text);
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 
 /*===== BACKDROP =====*/
@@ -890,6 +937,10 @@ footer address a:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .is-hidden {
@@ -912,6 +963,12 @@ footer address a:hover {
 
 /*===== FORM =====*/
 
+.icon-close {
+  width: 18px;
+  height: 18px;
+  fill: var(--form-icon-not-active);
+}
+
 .modal h2 {
   margin-top: 40px;
   text-align: center;
@@ -930,11 +987,44 @@ footer address a:hover {
   background-color: transparent;
 }
 
-.icon-form-check {
+.icon-form-check-border {
   width: 16px;
   height: 15px;
+  fill: var(--form-icon-not-active);
+}
+
+.icon-form-check {
+  width: 11px;
+  height: 8px;
   fill: red;
-  color: blue;
+}
+
+.modal form input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--form-input-border);
+  border-radius: 4px;
+}
+
+.modal form textarea {
+  width: 448px;
+  height: 120px;
+  border: 1px solid var(--form-input-border);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.modal p {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--form-text);
+  margin: 0 auto;
+}
+
+.modal p a {
+  color: var(--form-links);
 }
 
 .submit-btn {
