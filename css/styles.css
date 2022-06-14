@@ -950,10 +950,8 @@ footer address a:hover {
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.9) translate(-50%, -50%);
+  transform: scale(0.9) translate(-54%, -54%);
   opacity: 0.5;
-  left: 50%;
-  top: 50%;
 }
 
 .backdrop.is-hidden {
@@ -980,11 +978,14 @@ footer address a:hover {
 
 .icon-form-mail,
 .icon-form-phone,
-.icon-form-peerson {
+.icon-form-person {
   width: 18px;
   height: 18px;
   fill: var(--form-icon-not-active);
   background-color: transparent;
+  position: absolute;
+  top: 35px;
+  left: 12px;
 }
 
 .icon-form-check-border {
@@ -1007,6 +1008,11 @@ footer address a:hover {
   height: 40px;
   border: 1px solid var(--form-input-border);
   border-radius: 4px;
+  padding: 12px 42px;
+}
+
+.modal form textarea::placeholder {
+  color: var(--form-comment-placeholder);
 }
 
 .modal form textarea {
@@ -1016,7 +1022,6 @@ footer address a:hover {
   border-radius: 4px;
   resize: vertical;
   padding: 12px 16px;
-  color: var(--form-comment-placeholder);
 }
 
 .modal label {
@@ -1026,11 +1031,69 @@ footer address a:hover {
   letter-spacing: 0.03em;
   color: var(--form-text);
   margin: 10px 40px;
+  position: relative;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+  border: 1px solid var(--form-icon-active);
+  outline: none;
+}
+
+.modal form label:focus-within svg use {
+  fill: var(--form-icon-active);
+}
+
+.checkbox {
+  text-align: center;
+  margin: 0;
+}
+
+.modal .checkbox label {
+  margin: 0 4px 0 0;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.modal .checkbox input:focus,
+.modal .checkbox input:active {
+  border: none;
+  outline: none;
+}
+
+.checkbox input.agreement {
+  margin-right: 2px;
+  display: block;
+  width: 16px;
+  height: 15px;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E");
+}
+
+.checkbox input.agreement:checked {
+  outline: none;
+  background-color: var(--form-icon-active);
+  background-repeat: no-repeat;
+  background-position: 70% 70%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
 }
 
 .modal p {
   display: inline-block;
   margin: auto;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03rem;
+  color: #757575;
 }
 
 .modal p a {

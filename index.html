@@ -438,7 +438,11 @@
           <h4>Zapisz się do newslettera</h4>
           <form>
             <label>
-              <input type="email" name="user-email" placeholder="E-mail" />
+              <input
+                type="email"
+                name="newsletter-email"
+                placeholder="E-mail"
+              />
               <button type="submit">
                 Zapisz się
                 <svg class="icon icon-send">
@@ -463,37 +467,52 @@
         <form>
           <label>
             Imię
-            <input type="text" name="username" />
+            <input type="text" name="form-username" />
+            <svg class="icon icon-form-person">
+              <use xlink:href="./images/icons2.svg#icon-form-person"></use>
+            </svg>
           </label>
 
           <label>
             Telefon
-            <input type="tel" name="phone_number" />
+            <input type="tel" name="form-phone" />
+            <svg class="icon icon-form-phone">
+              <use xlink:href="./images/icons2.svg#icon-form-phone"></use>
+            </svg>
           </label>
 
           <label>
             Email
-            <input type="email" name="email" />
+            <input type="email" name="form-email" />
+            <svg class="icon icon-form-mail">
+              <use xlink:href="./images/icons2.svg#icon-form-mail"></use>
+            </svg>
           </label>
 
           <label>
             Komentarz
             <textarea
-              name="comment"
+              name="form-comment"
               rows="5"
               placeholder="Wprowadź tekst"
             ></textarea>
           </label>
 
-          <br />
+          <div class="checkbox">
+            <label>
+              <input
+                type="checkbox"
+                name="form-agreement"
+                value="form-agreement"
+                class="agreement"
+              />
+            </label>
 
-          <svg class="icon icon-form-check-border">
-            <use xlink:href="./images/icons2.svg#icon-form-check-border"></use>
-          </svg>
-          <p>
-            Oświadczam iż akceptuję <a href="">Regulamin</a> i
-            <a href="">Politykę Prywatności.</a>
-          </p>
+            <p>
+              Oświadczam iż akceptuję <a href="">Regulamin</a> i
+              <a href="">Politykę Prywatności.</a>
+            </p>
+          </div>
           <button type="button" class="submit-btn">Wyślij</button>
         </form>
       </div>
