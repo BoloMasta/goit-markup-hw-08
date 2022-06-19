@@ -1093,56 +1093,48 @@ footer address a:hover {
   margin: 0;
 }
 
-.modal .checkbox label {
-  margin: 0 4px 0 0;
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.form-agreeement-text::before {
+  content: "";
   display: inline-block;
-  position: relative;
-  top: 2px;
-}
-
-.modal .checkbox input:focus,
-.modal .checkbox input:active {
-  border: none;
-  outline: none;
-}
-
-.checkbox input.agreement {
-  margin-right: 2px;
-  display: block;
   width: 16px;
   height: 15px;
-  outline: none;
-  padding: 0;
-  cursor: pointer;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
+  border: 1.5px solid black;
+  border-radius: 2px;
+  margin-right: 5px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  bottom: -2px;
+}
+
+.form-agreement-checkbox:checked + .form-agreeement-text::before {
+  background-color: var(--form-icon-active);
+  border: 1.5px solid var(--form-icon-active);
+  background-image: url("../images/check.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E");
-  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox input.agreement:checked {
-  outline: none;
-  background-color: var(--form-icon-active);
-  background-repeat: no-repeat;
-  background-position: 50% 60%;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.9'/%3E%3C/svg%3E");
-  box-shadow: 0 0 4px var(--form-icon-active);
-}
-
-.modal p {
+.form-agreeement-text {
   display: inline-block;
   margin: auto;
   font-size: 0.875rem;
   line-height: 1.5rem;
   letter-spacing: 0.03rem;
-  color: #757575;
+  color: var(--form-text);
 }
 
-.modal p a {
+.form-agreeement-text a {
   color: var(--form-links);
 }
 
