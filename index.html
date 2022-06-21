@@ -439,12 +439,13 @@
 
         <div class="newsletter">
           <h4>Zapisz się do newslettera</h4>
-          <form>
+          <form name="newsletter-form" autocomplete="on">
             <label>
               <input
                 type="email"
                 name="newsletter-email"
                 placeholder="E-mail"
+                required
               />
             </label>
             <button type="submit">
@@ -471,10 +472,10 @@
 
         <!--===== FORMULARZ =====-->
 
-        <form>
+        <form name="modal-form" autocomplete="on">
           <label>
             Imię
-            <input type="text" name="form-username" />
+            <input type="text" name="form-username" required />
             <svg class="icon icon-form-person">
               <use xlink:href="./images/icons.svg#icon-form-person"></use>
             </svg>
@@ -482,7 +483,7 @@
 
           <label>
             Telefon
-            <input type="tel" name="form-phone" />
+            <input type="tel" name="form-phone" required />
             <svg class="icon icon-form-phone">
               <use xlink:href="./images/icons.svg#icon-form-phone"></use>
             </svg>
@@ -490,7 +491,7 @@
 
           <label>
             Email
-            <input type="email" name="form-email" />
+            <input type="email" name="form-email" required />
             <svg class="icon icon-form-mail">
               <use xlink:href="./images/icons.svg#icon-form-mail"></use>
             </svg>
