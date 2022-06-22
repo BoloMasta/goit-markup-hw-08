@@ -1,0 +1,28 @@
+/* MENU */
+.header {
+  display: flex;
+  color: red;
+  height: 300px;
+  transform: translate(-50%);
+}
+.header h1 {
+  font-size: 30px;
+}
+
+.nav {
+  width: 300px;
+}
+
+.projects {
+  transform: translate(-50%);
+}
+
+.projects h1 {
+  height: 300px;
+  color: blue;
+  background-color: red;
+}
+
+.projects h2 {
+  color: black;
+}/*# sourceMappingURL=main.css.map */
