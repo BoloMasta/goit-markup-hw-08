@@ -7,7 +7,3 @@ $menu-contact-links: #757575;
 $menu-highlight: #2196f3;
 $menu-border: #ececec;
 $heading: #212121;
-
-@function getColor($key) {
-  @return map-get($colors, $key);
-}

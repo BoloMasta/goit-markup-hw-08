@@ -1,0 +1,112 @@
+.footer {
+  height: 252px;
+  background-color: var(--footer-background);
+  color: var(--footer-address);
+  &__address {
+    width: 246px;
+    height: auto;
+    margin-bottom: 60px;
+    letter-spacing: 0.03em;
+    font-size: 0.875rem;
+    line-height: 2.11;
+    clear: left;
+    font-style: normal;
+    margin: 0 0 0 15px;
+    float: left;
+  }
+  &__contact {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.join-us {
+  width: 206px;
+  height: 80px;
+  float: left;
+  margin: -50px auto 0 70px;
+  &__header {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--footer-address);
+  }
+  &__list {
+    max-width: 206px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+  }
+  &__link {
+  }
+  &__item {
+    width: 44px;
+    height: 44px;
+    background-color: inherit;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--footer-social-links-item-highlight);
+    background-color: var(--footer-social-links-item-backround);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__icon {
+    display: inline-block;
+  }
+  &__svg-use {
+  }
+}
+
+.newsletter {
+  float: left;
+  margin: -50px auto 0 78px;
+  &__header {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--footer-address);
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid var(--newsletter-border);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--newsletter-mail);
+    padding: 15px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__btn {
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    color: var(--newsletter-button-text);
+    background: var(--newsletter-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.06em;
+    border: none;
+    padding: 0 28px 0 42px;
+    position: relative;
+    text-align: left;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--newsletter-button-text);
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+}

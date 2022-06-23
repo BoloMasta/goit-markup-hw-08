@@ -348,35 +348,35 @@
 
       <section class="customers">
         <div class="container">
-          <h2>Nasi klienci</h2>
-          <ul>
-            <li>
-              <svg class="icon icon-logo1">
+          <h2 class="customers__header">Nasi klienci</h2>
+          <ul class="customers__list">
+            <li class="customers__item">
+              <svg class="icon icon-logo1 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo1"></use>
               </svg>
             </li>
-            <li>
-              <svg class="icon icon-logo2">
+            <li class="customers__item">
+              <svg class="icon icon-logo2 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo2"></use>
               </svg>
             </li>
-            <li>
-              <svg class="icon icon-logo3">
+            <li class="customers__item">
+              <svg class="icon icon-logo3 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo3"></use>
               </svg>
             </li>
-            <li>
-              <svg class="icon icon-logo4">
+            <li class="customers__item">
+              <svg class="icon icon-logo4 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo4"></use>
               </svg>
             </li>
-            <li>
-              <svg class="icon icon-logo5">
+            <li class="customers__item">
+              <svg class="icon icon-logo5 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo5"></use>
               </svg>
             </li>
-            <li>
-              <svg class="icon icon-logo6">
+            <li class="customers__item">
+              <svg class="icon icon-logo6 customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo6"></use>
               </svg>
             </li>
@@ -387,48 +387,75 @@
 
     <!--===== FOOTER =====-->
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <a href="./index.html" class="logo"><span> Web</span>Studio </a>
-        <address>
+        <address class="footer__adress">
           m. Warszawa, Aleje Jerozolimskie 21<br />
-          <a href="mailto:info@devstudio.com">info@example.com</a><br />
-          <a href="tel:+48111111111">+48 111 111 111</a>
+          <a class="footer__contact" href="mailto:info@devstudio.com"
+            >info@example.com</a
+          ><br />
+          <a class="footer__contact" href="tel:+48111111111">+48 111 111 111</a>
         </address>
-        <div class="social">
-          <h4>Dołącz do nas</h4>
 
-          <!--===== SOCIAL LINKS =====-->
+        <!--===== SOCIAL LINKS =====-->
 
-          <div class="social-links">
-            <a href="https://instagram.com" target="_blank">
-              <div class="social-links-item-footer">
-                <svg class="icon icon-instagram">
-                  <use xlink:href="./images/icons.svg#icon-instagram"></use>
+        <div class="social join-us">
+          <h4 class="join-us__header">Dołącz do nas</h4>
+
+          <div class="social-links join-us__list">
+            <a
+              class="join-us__link"
+              href="https://instagram.com"
+              target="_blank"
+            >
+              <div class="social-links-item-footer join-us__item">
+                <svg class="icon icon-instagram join-us__icon">
+                  <use
+                    class="join-us__svg-use"
+                    xlink:href="./images/icons.svg#icon-instagram"
+                  ></use>
                 </svg>
               </div>
             </a>
 
-            <a href="https://twitter.com" target="_blank">
-              <div class="social-links-item-footer">
-                <svg class="icon icon-twitter">
-                  <use xlink:href="./images/icons.svg#icon-twitter"></use>
+            <a class="join-us__link" href="https://twitter.com" target="_blank">
+              <div class="social-links-item-footer join-us__item">
+                <svg class="icon icon-twitter join-us__icon">
+                  <use
+                    class="join-us__svg-use"
+                    xlink:href="./images/icons.svg#icon-twitter"
+                  ></use>
                 </svg>
               </div>
             </a>
 
-            <a href="https://facebook.com" target="_blank">
-              <div class="social-links-item-footer">
-                <svg class="icon icon-facebook">
-                  <use xlink:href="./images/icons.svg#icon-facebook"></use>
+            <a
+              class="join-us__link"
+              href="https://facebook.com"
+              target="_blank"
+            >
+              <div class="social-links-item-footer join-us__item">
+                <svg class="icon icon-facebook join-us__icon">
+                  <use
+                    class="join-us__svg-use"
+                    xlink:href="./images/icons.svg#icon-facebook"
+                  ></use>
                 </svg>
               </div>
             </a>
 
-            <a href="https://linkedin.com" target="_blank">
-              <div class="social-links-item-footer">
-                <svg class="icon icon-linkedin">
-                  <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+            <a
+              class="join-us__link"
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <div class="social-links-item-footer join-us__item">
+                <svg class="icon icon-linkedin join-us__icon">
+                  <use
+                    class="join-us__svg-use"
+                    xlink:href="./images/icons.svg#icon-linkedin"
+                  ></use>
                 </svg>
               </div>
             </a>
@@ -438,19 +465,20 @@
         <!--===== NEWSLETTER =====-->
 
         <div class="newsletter">
-          <h4>Zapisz się do newslettera</h4>
+          <h4 class="newsletter__header">Zapisz się do newslettera</h4>
           <form name="newsletter-form" autocomplete="on">
             <label>
               <input
+                class="newsletter__input"
                 type="email"
                 name="newsletter-email"
                 placeholder="E-mail"
                 required
               />
             </label>
-            <button type="submit">
+            <button class="newstletter__btn" type="submit">
               Zapisz się
-              <svg class="icon icon-send">
+              <svg class="icon icon-send newsletter__icon">
                 <use xlink:href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
