@@ -1,0 +1,26 @@
+.lead {
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to bottom,
+      $lead-background,
+      $lead-background
+    ),
+    url("../images/BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 600px;
+  display: flex;
+  align-items: center;
+  &__header {
+    font-weight: 900;
+    font-size: 2.75rem;
+    line-height: 1.36;
+    color: $lead-text;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.24rem;
+    margin: 30px 0;
+    max-width: 696px;
+  }
+}

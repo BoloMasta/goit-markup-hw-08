@@ -1,0 +1,24 @@
+.team-card {
+  width: 270px;
+  text-align: center;
+  margin: 0;
+  &__image {
+    width: 270px;
+    height: 260px;
+  }
+  &__label {
+    font-size: 1rem;
+    line-height: 1.1875;
+    letter-spacing: 0.03em;
+    color: $our-team-text;
+    &--bold {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.1875;
+      display: block;
+      letter-spacing: 0.03em;
+      color: $our-team-heading;
+      padding: 15px;
+    }
+  }
+}

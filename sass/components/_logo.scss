@@ -1,0 +1,15 @@
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 1.19;
+  letter-spacing: 0.03rem;
+  text-decoration: none;
+  color: $menu-logo-2-part;
+  &--span {
+    color: $menu-logo-1-part;
+  }
+}
+
+.menu__logo {
+}

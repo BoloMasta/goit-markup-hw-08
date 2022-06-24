@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/modern-normalize_1.1.0.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./sass/main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,29 +18,37 @@
 
     <title>WebStudio</title>
   </head>
-  <body>
+  <body class="body">
     <!--===== MENU =====-->
 
     <header class="menu">
-      <div class="container">
-        <a href="./index.html" class="logo"><span>Web</span>Studio </a>
+      <div class="container container__menu">
+        <a href="./index.html" class="logo menu__logo"
+          ><span class="logo--span">Web</span>Studio
+        </a>
 
-        <nav>
-          <ul>
-            <li><a href="./index.html" class="active">Agencja</a></li>
-            <li><a href="./Portfolio.html">Portfolio</a></li>
-            <li><a href="#">Kontakt</a></li>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./index.html"
+                >Agencja</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./Portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Kontakt</a></li>
           </ul>
         </nav>
 
-        <a href="mailto:info@devstudio.com">
-          <svg class="icon icon-mail">
+        <a class="menu__contact" href="mailto:info@devstudio.com">
+          <svg class="icon icon-mail menu__icon icon--mail">
             <use xlink:href="./images/icons.svg#icon-mail"></use>
           </svg>
           info@devstudio.com
         </a>
-        <a href="tel:+48111111111">
-          <svg class="icon icon-smartphone">
+        <a class="menu__contact menu__contact--end" href="tel:+48111111111">
+          <svg class="icon icon-smartphone menu__icon icon--phone">
             <use xlink:href="./images/icons.svg#icon-smartphone"></use>
           </svg>
           +48 111 111 111
@@ -50,62 +59,66 @@
     <main>
       <!--===== LEAD =====-->
 
-      <section class="lead">
+      <section class="lead section">
         <div class="container">
-          <h1>Efektywne rozwiązania dla waszego biznesu</h1>
-          <button type="button" data-modal-open>Zamów usługę</button>
+          <h1 class="lead__header">
+            Efektywne rozwiązania dla waszego biznesu
+          </h1>
+          <button type="button" class="btn" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
       </section>
 
       <!--===== NASZE ATUTY =====-->
 
-      <section class="advantages">
+      <section class="advantages section">
         <div class="container">
-          <ul>
-            <li>
-              <div class="advantages-icon-container">
-                <svg class="icon icon-antenna">
+          <ul class="advantages__grid">
+            <li class="advantage">
+              <div class="advantages-icon-container advantage__icon-container">
+                <svg class="icon icon-antenna advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3>Lorem ipsum</h3>
-              <p>
+              <h3 class="advantage__header">Lorem ipsum</h3>
+              <p class="advantage__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
                 dolore doloribus odio non laboriosam consequatur nam.
               </p>
             </li>
-            <li>
-              <div class="advantages-icon-container">
-                <svg class="icon icon-clock">
+            <li class="advantage">
+              <div class="advantages-icon-container advantage__icon-container">
+                <svg class="icon icon-clock advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3>Lorem ipsum</h3>
-              <p>
+              <h3 class="advantage__header">Lorem ipsum</h3>
+              <p class="advantage__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
                 dolore doloribus odio non laboriosam consequatur nam.
               </p>
             </li>
-            <li>
-              <div class="advantages-icon-container">
-                <svg class="icon icon-diagram">
+            <li class="advantage">
+              <div class="advantages-icon-container advantage__icon-container">
+                <svg class="icon icon-diagram advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3>Lorem ipsum</h3>
-              <p>
+              <h3 class="advantage__header">Lorem ipsum</h3>
+              <p class="advantage__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
                 dolore doloribus odio non laboriosam consequatur nam.
               </p>
             </li>
-            <li>
-              <div class="advantages-icon-container">
-                <svg class="icon icon-astronaut">
+            <li class="advantage advantage--last">
+              <div class="advantages-icon-container advantage__icon-container">
+                <svg class="icon icon-astronaut advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3>Lorem ipsum</h3>
-              <p>
+              <h3 class="advantage__header">Lorem ipsum</h3>
+              <p class="advantage__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
                 dolore doloribus odio non laboriosam consequatur nam.
               </p>
@@ -118,33 +131,42 @@
 
       <section class="what-we-do">
         <div class="container">
-          <h2>Czym się zajmujemy</h2>
-          <ul>
-            <li>
-              <div class="what-we-do-box">
+          <h2 class="what-we-do__header">Czym się zajmujemy</h2>
+          <ul class="what-we-do__grid">
+            <li class="what-we-do__item">
+              <div class="what-we-do-box what-we-do__box">
                 <img
+                  class="what-we-do__image"
                   src="./images/box1.jpg"
                   alt="Biurko / dłonie / klawiatura / tablet / diagram"
                 />
-                <p class="what-we-do-label">Aplikacje komputerowe</p>
+                <p class="what-we-do-label what-we-do__label">
+                  Aplikacje komputerowe
+                </p>
               </div>
             </li>
-            <li>
-              <div class="what-we-do-box">
+            <li class="what-we-do__item">
+              <div class="what-we-do-box what-we-do__box">
                 <img
+                  class="what-we-do__image"
                   src="./images/box2.jpg"
                   alt=" Dłonie / laptop / telefony komórkowe"
                 />
-                <p class="what-we-do-label">Aplikacje mobilne</p>
+                <p class="what-we-do-label what-we-do__label">
+                  Aplikacje mobilne
+                </p>
               </div>
             </li>
-            <li>
-              <div class="what-we-do-box">
+            <li class="what-we-do__item what-we-do__item--last">
+              <div class="what-we-do-box what-we-do__box">
                 <img
+                  class="what-we-do__image"
                   src="./images/box3.jpg"
                   alt="Tablet / paleta kolorów / dłonie"
                 />
-                <p class="what-we-do-label">Rozwiązania graficzne</p>
+                <p class="what-we-do-label what-we-do__label">
+                  Rozwiązania graficzne
+                </p>
               </div>
             </li>
           </ul>
@@ -155,13 +177,17 @@
 
       <section class="our-team">
         <div class="container">
-          <h2>Nasz zespół</h2>
-          <ul>
-            <li>
-              <figure>
-                <img src="./images/team1.jpg" alt="portret" />
-                <figcaption>
-                  <b>John Doe</b>
+          <h2 class="our-team__header">Nasz zespół</h2>
+          <ul class="our-team__grid">
+            <li class="our-team__item">
+              <figure class="team-card">
+                <img
+                  class="team-card__image"
+                  src="./images/team1.jpg"
+                  alt="portret"
+                />
+                <figcaption class="team-card__label">
+                  <b class="team-card__label--bold">John Doe</b>
                   Product Designer
                 </figcaption>
               </figure>
@@ -169,172 +195,294 @@
               <!--===== SOCIAL LINKS=====-->
 
               <div class="social-links">
-                <a href="https://instagram.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-instagram">
-                      <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                <a
+                  class="social-links__link"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-instagram social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-instagram"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://twitter.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-twitter">
-                      <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                <a
+                  class="social-links__link"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-twitter social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-twitter"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://facebook.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-facebook">
-                      <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                <a
+                  class="social-links__link"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-facebook social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-facebook"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://linkedin.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-linkedin">
-                      <use xlink:href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-            </li>
-
-            <li>
-              <figure>
-                <img src="./images/team2.jpg" alt="portret" />
-                <figcaption>
-                  <b>John Doe</b>
-                  Frontend Developer
-                </figcaption>
-              </figure>
-
-              <!--===== SOCIAL LINKS=====-->
-
-              <div class="social-links">
-                <a href="https://instagram.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-instagram">
-                      <use xlink:href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </div>
-                </a>
-
-                <a href="https://twitter.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-twitter">
-                      <use xlink:href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </div>
-                </a>
-
-                <a href="https://facebook.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-facebook">
-                      <use xlink:href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </div>
-                </a>
-
-                <a href="https://linkedin.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-linkedin">
-                      <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                <a
+                  class="social-links__link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-linkedin social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-linkedin"
+                      ></use>
                     </svg>
                   </div>
                 </a>
               </div>
             </li>
 
-            <li>
-              <figure>
-                <img src="./images/team3.jpg" alt="portret" />
-                <figcaption>
-                  <b>John Doe</b>
-                  Marketing
+            <li class="our-team__item">
+              <figure class="team-card">
+                <img
+                  class="team-card__image"
+                  src="./images/team1.jpg"
+                  alt="portret"
+                />
+                <figcaption class="team-card__label">
+                  <b class="team-card__label--bold">John Doe</b>
+                  Product Designer
                 </figcaption>
               </figure>
 
               <!--===== SOCIAL LINKS=====-->
 
               <div class="social-links">
-                <a href="https://instagram.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-instagram">
-                      <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                <a
+                  class="social-links__link"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-instagram social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-instagram"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://twitter.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-twitter">
-                      <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                <a
+                  class="social-links__link"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-twitter social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-twitter"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://facebook.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-facebook">
-                      <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                <a
+                  class="social-links__link"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-facebook social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-facebook"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://linkedin.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-linkedin">
-                      <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                <a
+                  class="social-links__link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-linkedin social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-linkedin"
+                      ></use>
                     </svg>
                   </div>
                 </a>
               </div>
             </li>
-
-            <li>
-              <figure>
-                <img src="./images/team4.jpg" alt="portret" />
-                <figcaption>
-                  <b>John Doe</b>
-                  UI Designer
+            <li class="our-team__item">
+              <figure class="team-card">
+                <img
+                  class="team-card__image"
+                  src="./images/team1.jpg"
+                  alt="portret"
+                />
+                <figcaption class="team-card__label">
+                  <b class="team-card__label--bold">John Doe</b>
+                  Product Designer
                 </figcaption>
               </figure>
 
               <!--===== SOCIAL LINKS=====-->
 
               <div class="social-links">
-                <a href="https://instagram.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-instagram">
-                      <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                <a
+                  class="social-links__link"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-instagram social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-instagram"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://twitter.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-twitter">
-                      <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                <a
+                  class="social-links__link"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-twitter social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-twitter"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://facebook.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-facebook">
-                      <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                <a
+                  class="social-links__link"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-facebook social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-facebook"
+                      ></use>
                     </svg>
                   </div>
                 </a>
 
-                <a href="https://linkedin.com" target="_blank">
-                  <div class="social-links-item">
-                    <svg class="icon icon-linkedin">
-                      <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                <a
+                  class="social-links__link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-linkedin social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="our-team__item">
+              <figure class="team-card">
+                <img
+                  class="team-card__image"
+                  src="./images/team1.jpg"
+                  alt="portret"
+                />
+                <figcaption class="team-card__label">
+                  <b class="team-card__label--bold">John Doe</b>
+                  Product Designer
+                </figcaption>
+              </figure>
+
+              <!--===== SOCIAL LINKS=====-->
+
+              <div class="social-links">
+                <a
+                  class="social-links__link"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-instagram social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </div>
+                </a>
+
+                <a
+                  class="social-links__link"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-twitter social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </div>
+                </a>
+
+                <a
+                  class="social-links__link"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-facebook social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </div>
+                </a>
+
+                <a
+                  class="social-links__link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                >
+                  <div class="social-links-item social-links__box">
+                    <svg class="icon icon-linkedin social-links__icon">
+                      <use
+                        class="social-links__use"
+                        xlink:href="./images/icons.svg#icon-linkedin"
+                      ></use>
                     </svg>
                   </div>
                 </a>
@@ -375,8 +523,8 @@
                 <use xlink:href="./images/icons.svg#icon-logo5"></use>
               </svg>
             </li>
-            <li class="customers__item">
-              <svg class="icon icon-logo6 customers__icon">
+            <li class="customers__item customers__item--last">
+              <svg class="icon icon-logo6 customers__icon customers__icon">
                 <use xlink:href="./images/icons.svg#icon-logo6"></use>
               </svg>
             </li>

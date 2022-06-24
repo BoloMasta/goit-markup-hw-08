@@ -1,0 +1,13 @@
+.advantages {
+  margin: 0 auto;
+  padding-bottom: 0px;
+  &__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
