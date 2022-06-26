@@ -1,4 +1,13 @@
+// BASE
+@import "base/common";
+@import "base/container";
+@import "base/section";
+
+// UTILS
 @import "utils/variables";
+@import "utils/visually-hidden";
+
+// COMPONENTS
 @import "components/body";
 @import "components/container";
 @import "components/logo";
@@ -16,3 +25,8 @@
 @import "components/customers";
 @import "components/projects";
 @import "components/footer";
+@import "components/join-us";
+@import "components/newsletter";
+@import "components/modal";
+
+// LAYOUT

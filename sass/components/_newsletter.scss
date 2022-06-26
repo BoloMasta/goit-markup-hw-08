@@ -1,0 +1,51 @@
+.newsletter {
+  float: left;
+  margin: -50px auto 0 78px;
+  &__header {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-address;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid $newsletter-border;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: $newsletter-mail;
+    padding: 15px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $newsletter-button-text;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  &__btn {
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    color: $newsletter-button-text;
+    background: $newsletter-button;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.06em;
+    border: none;
+    padding: 0 28px 0 42px;
+    position: relative;
+    text-align: left;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
