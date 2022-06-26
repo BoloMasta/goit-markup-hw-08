@@ -1,5 +1,4 @@
 .projects {
-  margin-top: -140px;
 }
 
 .project-grid {
@@ -12,16 +11,26 @@
   flex-wrap: wrap;
   &__item {
     float: left;
-    background: var(--projects-background);
-    border: 1px solid var(--projects-border);
+    width: 370px;
+    height: 404px;
+    background: $projects-background;
+    border: 1px solid $projects-border;
     margin-left: 20px;
     margin-top: 20px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+      & .project__overlay {
+        transform: translatey(0);
+      }
+    }
   }
 }
 
 .project {
-  margin-top: -140px;
+  margin: 0 auto;
   &__box {
     width: 370px;
     height: 294px;
@@ -32,12 +41,13 @@
   &__image {
     width: 370px;
     height: 294px;
+    display: inline-block;
   }
 
   &__overlay {
     width: 370px;
     height: 294px;
-    background-color: var(--projects-overlay-background);
+    background-color: $projects-overlay-background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +63,7 @@
     height: 196px;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    color: var(--projects-overlay-text);
+    color: $projects-overlay-text;
   }
 
   &__figcaption {
@@ -62,7 +72,7 @@
     font-size: 1rem;
     line-height: 1.875;
     letter-spacing: 0.03em;
-    color: var(--projects-text);
+    color: $projects-text;
     margin: 15px auto 0 auto;
   }
 
@@ -71,7 +81,7 @@
     font-size: 1.1rem;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--projects-heading);
+    color: $projects-heading;
     margin: 0 0 10px 0;
   }
 }

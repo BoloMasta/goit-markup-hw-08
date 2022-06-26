@@ -9,6 +9,9 @@
   &__item {
     display: inline;
     min-width: 300px;
+    &:nth-child(2) {
+      margin: 0 46px;
+    }
   }
   &__link {
     color: $menu-nav;

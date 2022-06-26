@@ -83,7 +83,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -108,10 +107,7 @@ body {
 }
 
 .menu {
-  border-bottom: 1px solid var(--menu-border);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  border-bottom: 1px solid #ececec;
 }
 .menu__contact {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -138,6 +134,12 @@ body {
 .menu__contact--end {
   margin-left: 30px;
 }
+.menu__contact:hover {
+  color: #2196f3;
+}
+.menu__contact:hover .menu__icon {
+  fill: #2196f3;
+}
 .menu__icon {
   fill: #757575;
   margin-right: 10px;
@@ -156,6 +158,9 @@ body {
 .nav__item {
   display: inline;
   min-width: 300px;
+}
+.nav__item:nth-child(2) {
+  margin: 0 46px;
 }
 .nav__link {
   color: #212121;
@@ -379,7 +384,7 @@ body {
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--heading);
+  color: #212121;
   margin-top: 0px;
   margin-bottom: 35px;
 }
@@ -393,7 +398,7 @@ body {
   width: 270px;
   height: 428px;
   float: left;
-  background: var(--our-team-card-background);
+  background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -456,21 +461,20 @@ body {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.social-links__box:hover {
+  background-color: #2196f3;
+}
+.social-links__box:hover .social-links__use {
+  fill: #ffffff;
+}
 .social-links__icon {
   width: 20px;
   height: 20px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-links__icon:hover {
-  background-color: #2196f3;
-  fill: #ffffff;
-}
 .social-links__use {
   fill: #afb1b8;
-}
-.social-links__use:hover {
-  fill: #ffffff;
 }
 
 .customers {
@@ -516,17 +520,19 @@ body {
 .customers__item--last {
   margin: 0;
 }
-.customers__icon {
-  fill: #afb1b8;
-  -webkit-transform: scale(0.4);
-          transform: scale(0.4);
+.customers__item:hover {
+  border: 1px solid #2196f3;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px #2196f3;
+          box-shadow: 0 0 3px #2196f3;
 }
-.customers__icon:hover {
+.customers__item:hover .customers__icon {
   fill: #2196f3;
 }
-
-.projects {
-  margin-top: -140px;
+.customers__icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
 }
 
 .project-grid {
@@ -545,8 +551,10 @@ body {
 }
 .project-grid__item {
   float: left;
-  background: var(--projects-background);
-  border: 1px solid var(--projects-border);
+  width: 370px;
+  height: 404px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
   margin-left: 20px;
   margin-top: 20px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -554,9 +562,18 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.project-grid__item:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+.project-grid__item:hover .project__overlay {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
 
 .project {
-  margin-top: -140px;
+  margin: 0 auto;
 }
 .project__box {
   width: 370px;
@@ -567,11 +584,12 @@ body {
 .project__image {
   width: 370px;
   height: 294px;
+  display: inline-block;
 }
 .project__overlay {
   width: 370px;
   height: 294px;
-  background-color: var(--projects-overlay-background);
+  background-color: rgba(33, 150, 243, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,7 +614,7 @@ body {
   height: 196px;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  color: var(--projects-overlay-text);
+  color: #ffffff;
 }
 .project__figcaption {
   width: 322px;
@@ -604,7 +622,7 @@ body {
   font-size: 1rem;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: var(--projects-text);
+  color: #757575;
   margin: 15px auto 0 auto;
 }
 .project__header {
@@ -612,7 +630,7 @@ body {
   font-size: 1.1rem;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--projects-heading);
+  color: #212121;
   margin: 0 0 10px 0;
 }
 
@@ -630,7 +648,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   clear: left;
   font-style: normal;
   margin: 0 0 0 15px;
@@ -641,7 +659,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.03em;
   font-size: 0.875rem;
-  line-height: 2.11;
+  line-height: 30px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -743,6 +761,7 @@ body {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
 }
 .newsletter__icon {
   width: 24px;
@@ -781,15 +800,14 @@ body {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.join-us__item:hover {
+  background-color: #2196f3;
+}
 .join-us__icon {
   width: 20px;
   height: 20px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.join-us__icon:hover {
-  background-color: #2196f3;
-  fill: #ffffff;
 }
 .join-us__svg-use {
   width: 20px;
@@ -821,6 +839,10 @@ body {
   padding: 15px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter__input:active, .newsletter__input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
 }
 .newsletter__icon {
   width: 24px;

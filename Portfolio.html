@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/modern-normalize_1.1.0.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,25 +22,33 @@
     <!--===== MENU =====-->
 
     <header class="menu">
-      <div class="container">
-        <a href="./index.html" class="logo"><span>Web</span>Studio </a>
+      <div class="container container__menu">
+        <a href="./index.html" class="logo menu__logo"
+          ><span class="logo--span">Web</span>Studio
+        </a>
 
-        <nav>
-          <ul>
-            <li><a href="./index.html">Agencja</a></li>
-            <li><a href="./Portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="#">Kontakt</a></li>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Agencja</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./Portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Kontakt</a></li>
           </ul>
         </nav>
 
-        <a href="mailto:info@devstudio.com">
-          <svg class="icon icon-mail">
+        <a class="menu__contact" href="mailto:info@devstudio.com">
+          <svg class="icon icon-mail menu__icon icon--mail">
             <use xlink:href="./images/icons.svg#icon-mail"></use>
           </svg>
           info@devstudio.com
         </a>
-        <a href="tel:+48111111111">
-          <svg class="icon icon-smartphone">
+        <a class="menu__contact menu__contact--end" href="tel:+48111111111">
+          <svg class="icon icon-smartphone menu__icon icon--phone">
             <use xlink:href="./images/icons.svg#icon-smartphone"></use>
           </svg>
           +48 111 111 111
@@ -50,7 +59,7 @@
     <main>
       <!--===== FILTERS =====-->
 
-      <section class="filters">
+      <section class="filters section">
         <div class="container">
           <button type="button">Wszystkie</button>
           <button type="button">Strony</button>
@@ -62,7 +71,7 @@
 
       <!--===== PROJEKTY =====-->
 
-      <section class="projects">
+      <section class="projects section">
         <div class="container">
           <ul class="project-grid">
             <li class="project-grid__item">
@@ -291,8 +300,10 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="./index.html" class="logo"><span> Web</span>Studio </a>
-        <address class="footer__adress">
+        <a href="./index.html" class="logo footer__logo"
+          ><span class="logo--span"> Web</span>Studio
+        </a>
+        <address class="footer__address">
           m. Warszawa, Aleje Jerozolimskie 21<br />
           <a class="footer__contact" href="mailto:info@devstudio.com"
             >info@example.com</a
@@ -378,7 +389,7 @@
                 required
               />
             </label>
-            <button class="newstletter__btn" type="submit">
+            <button class="btn newsletter__btn" type="submit">
               Zapisz się
               <svg class="icon icon-send newsletter__icon">
                 <use xlink:href="./images/icons.svg#icon-send"></use>
