@@ -2,8 +2,8 @@
   margin: 0 auto;
   background-image: linear-gradient(
       to bottom,
-      $lead-background,
-      $lead-background
+      getColor('lead-background'),
+      getColor('lead-background')
     ),
     url("../images/BG.jpg");
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
     font-weight: 900;
     font-size: 2.75rem;
     line-height: 1.36;
-    color: $lead-text;
+    color: getColor('lead-text');
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.24rem;

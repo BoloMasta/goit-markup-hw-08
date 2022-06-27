@@ -1,34 +1,33 @@
+// UTILS
+@import "utils/variables";
+@import "utils/visually-hidden";
+@import "utils/colors";
+
 // BASE
 @import "base/common";
 @import "base/container";
 @import "base/section";
 
-// UTILS
-@import "utils/variables";
-@import "utils/visually-hidden";
-
 // COMPONENTS
-@import "components/body";
-@import "components/container";
 @import "components/logo";
-@import "components/menu";
 @import "components/nav";
-@import "components/icon";
-@import "components/lead";
 @import "components/btn";
-@import "components/advantages";
 @import "components/advantage";
-@import "components/what-we-do";
-@import "components/our-team";
 @import "components/team-card";
 @import "components/social-links";
-@import "components/customers";
-@import "components/projects";
-@import "components/footer";
 @import "components/join-us";
 @import "components/newsletter";
 @import "components/modal";
 
-
-
 // LAYOUT
+@import "layout/menu";
+@import "layout/lead";
+@import "layout/what-we-do";
+@import "layout/advantages";
+@import "layout/our-team";
+@import "layout/customers";
+@import "layout/footer";
+
+// PAGES
+@import "pages/filters";
+@import "pages/projects";

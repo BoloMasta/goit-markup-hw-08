@@ -42,13 +42,13 @@
         </nav>
 
         <a class="menu__contact" href="mailto:info@devstudio.com">
-          <svg class="icon icon-mail menu__icon icon--mail">
+          <svg class="menu__icon icon--mail">
             <use xlink:href="./images/icons.svg#icon-mail"></use>
           </svg>
           info@devstudio.com
         </a>
         <a class="menu__contact menu__contact--end" href="tel:+48111111111">
-          <svg class="icon icon-smartphone menu__icon icon--phone">
+          <svg class="menu__icon icon--phone">
             <use xlink:href="./images/icons.svg#icon-smartphone"></use>
           </svg>
           +48 111 111 111
@@ -76,8 +76,8 @@
         <div class="container">
           <ul class="advantages__grid">
             <li class="advantage">
-              <div class="advantages-icon-container advantage__icon-container">
-                <svg class="icon icon-antenna advantage__icon">
+              <div class="advantage__icon-container">
+                <svg class="advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -88,8 +88,8 @@
               </p>
             </li>
             <li class="advantage">
-              <div class="advantages-icon-container advantage__icon-container">
-                <svg class="icon icon-clock advantage__icon">
+              <div class="advantage__icon-container">
+                <svg class="advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -100,8 +100,8 @@
               </p>
             </li>
             <li class="advantage">
-              <div class="advantages-icon-container advantage__icon-container">
-                <svg class="icon icon-diagram advantage__icon">
+              <div class="advantage__icon-container">
+                <svg class="advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -112,8 +112,8 @@
               </p>
             </li>
             <li class="advantage advantage--last">
-              <div class="advantages-icon-container advantage__icon-container">
-                <svg class="icon icon-astronaut advantage__icon">
+              <div class="advantage__icon-container">
+                <svg class="advantage__icon">
                   <use xlink:href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -134,39 +134,33 @@
           <h2 class="what-we-do__header">Czym się zajmujemy</h2>
           <ul class="what-we-do__grid">
             <li class="what-we-do__item">
-              <div class="what-we-do-box what-we-do__box">
+              <div class="what-we-do__box">
                 <img
                   class="what-we-do__image"
                   src="./images/box1.jpg"
                   alt="Biurko / dłonie / klawiatura / tablet / diagram"
                 />
-                <p class="what-we-do-label what-we-do__label">
-                  Aplikacje komputerowe
-                </p>
+                <p class="what-we-do__label">Aplikacje komputerowe</p>
               </div>
             </li>
             <li class="what-we-do__item">
-              <div class="what-we-do-box what-we-do__box">
+              <div class="what-we-do__box">
                 <img
                   class="what-we-do__image"
                   src="./images/box2.jpg"
                   alt=" Dłonie / laptop / telefony komórkowe"
                 />
-                <p class="what-we-do-label what-we-do__label">
-                  Aplikacje mobilne
-                </p>
+                <p class="what-we-do__label">Aplikacje mobilne</p>
               </div>
             </li>
             <li class="what-we-do__item what-we-do__item--last">
-              <div class="what-we-do-box what-we-do__box">
+              <div class="what-we-do__box">
                 <img
                   class="what-we-do__image"
                   src="./images/box3.jpg"
                   alt="Tablet / paleta kolorów / dłonie"
                 />
-                <p class="what-we-do-label what-we-do__label">
-                  Rozwiązania graficzne
-                </p>
+                <p class="what-we-do__label">Rozwiązania graficzne</p>
               </div>
             </li>
           </ul>
@@ -641,63 +635,85 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-btn" data-modal-close>
-          <svg class="icon icon-close">
+        <button type="button" class="close-btn btn__close" data-modal-close>
+          <svg class="icon icon-close modal__btn--close">
             <use xlink:href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2>Zostaw swoje dane w formularzu poniżej</h2>
+        <h2 class="modal__header">Zostaw swoje dane w formularzu poniżej</h2>
 
         <!--===== FORMULARZ =====-->
 
-        <form name="modal-form" autocomplete="on">
-          <label>
+        <form name="modal-form modal__form" autocomplete="on">
+          <label class="modal__label">
             Imię
-            <input type="text" name="form-username" required />
-            <svg class="icon icon-form-person">
+            <input
+              class="modal__input"
+              type="text"
+              name="form-username"
+              required
+            />
+            <svg class="icon icon-form-person modal__icon">
               <use xlink:href="./images/icons.svg#icon-form-person"></use>
             </svg>
           </label>
 
-          <label>
+          <label class="modal__label">
             Telefon
-            <input type="tel" name="form-phone" required />
-            <svg class="icon icon-form-phone">
+            <input class="modal__input" type="tel" name="form-phone" required />
+            <svg class="icon icon-form-phone modal__icon">
               <use xlink:href="./images/icons.svg#icon-form-phone"></use>
             </svg>
           </label>
 
-          <label>
+          <label class="modal__label">
             Email
-            <input type="email" name="form-email" required />
-            <svg class="icon icon-form-mail">
+            <input
+              class="modal__input"
+              type="email"
+              name="form-email"
+              required
+            />
+            <svg class="icon icon-form-mail modal__icon">
               <use xlink:href="./images/icons.svg#icon-form-mail"></use>
             </svg>
           </label>
 
-          <label>
+          <label class="modal__label">
             Komentarz
             <textarea
+              class="modal__textarea"
               name="form-comment"
               rows="5"
               placeholder="Wprowadź tekst"
             ></textarea>
           </label>
 
-          <div class="checkbox">
+          <div class="checkbox modal__agreement">
             <input
               type="checkbox"
               name="form-agreement"
               value="form-agreement"
               id="form-agreement"
-              class="form-agreement-checkbox visually-hidden"
+              class="form-agreement-checkbox visually-hidden modal__checkbox"
             />
-            <label for="form-agreement" class="form-agreeement-text">
-              Oświadczam iż akceptuję <a href="" target="_blank">Regulamin</a> i
-              <a href="" target="_blank">Politykę Prywatności.</a>
+            <label
+              for="form-agreement"
+              class="form-agreement-text modal__agreement-label"
+            >
+              Oświadczam iż akceptuję
+              <a href="" class="modal__agreement-link" target="_blank"
+                >Regulamin</a
+              >
+              i
+              <a href="" class="modal__agreement-link" target="_blank"
+                >Politykę Prywatności.</a
+              >
             </label>
           </div>
-          <button type="submit" class="submit-btn">Wyślij</button>
+          <button type="submit" class="submit-btn btn modal__btn">
+            Wyślij
+          </button>
         </form>
       </div>
     </div>

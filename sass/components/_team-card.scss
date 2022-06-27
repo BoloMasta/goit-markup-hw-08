@@ -10,14 +10,14 @@
     font-size: 1rem;
     line-height: 1.1875;
     letter-spacing: 0.03em;
-    color: $our-team-text;
+    color: getColor('our-team-text');
     &--bold {
       font-weight: 500;
       font-size: 1rem;
       line-height: 1.1875;
       display: block;
       letter-spacing: 0.03em;
-      color: $our-team-heading;
+      color: getColor('our-team-heading');
       padding: 15px;
     }
   }

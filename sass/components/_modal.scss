@@ -1,5 +1,5 @@
 .backdrop {
-  background: var(--modal-background);
+  background: getColor("modal-background");
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: var(--modal-window);
+  background: getColor("modal-window");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -23,6 +23,109 @@
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     top 250ms cubic-bezier(0.4, 0, 0.2, 1),
     left 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  &__header {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
+    letter-spacing: 0.03em;
+  }
+  &__label {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.03em;
+    color: getColor("form-text");
+    margin: 10px 40px;
+    position: relative;
+  }
+  &__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 18px;
+    height: 18px;
+    fill: getColor("form-icon-not-active");
+    background-color: transparent;
+    position: absolute;
+    top: 35px;
+    left: 12px;
+  }
+  &__input {
+    display: block;
+    width: 448px;
+    height: 40px;
+    border: 1px solid getColor("form-input-border");
+    border-radius: 4px;
+    padding: 12px 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:active,
+    &:focus {
+      border-color: getColor("form-icon-active");
+      outline: none;
+      & + .modal__icon {
+        fill: getColor("form-icon-active");
+      }
+    }
+  }
+
+  &__textarea {
+    width: 448px;
+    height: 120px;
+    border: 1px solid getColor("form-input-border");
+    border-radius: 4px;
+    resize: vertical;
+    padding: 12px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    ::placeholder {
+      color: getColor("form-comment-placeholder");
+    }
+    &:active,
+    &:focus {
+      border-color: getColor("form-icon-active");
+      outline: none;
+    }
+  }
+  &__agreement {
+    text-align: center;
+    margin: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__checkbox {
+    &:checked + .modal__agreement-label::before {
+      background-color: getColor("form-icon-active");
+      border: 1.5px solid getColor("form-icon-active");
+      background-image: url("../images/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__agreement-label {
+    display: inline-block;
+    margin: auto;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+    color: getColor("form-text");
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      border: 1.5px solid black;
+      border-radius: 2px;
+      margin-right: 5px;
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      bottom: -2px;
+    }
+  }
+  &__agreement-link {
+    color: getColor("form-links");
+  }
 }
 
 .close-btn {
@@ -31,7 +134,7 @@
   right: 8px;
   width: 30px;
   height: 30px;
-  background: var(--modal-window);
+  background: getColor("modal-window");
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
@@ -40,4 +143,28 @@
   align-items: center;
   justify-content: center;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 1px 1px 3px getColor("form-icon-not-active");
+  }
+  &:active {
+    box-shadow: inset 1px 1px 1px getColor("form-icon-not-active"),
+      1px 1px 3px getColor("form-icon-not-active");
+  }
+}
+
+.modal__btn {
+  outline: none;
+  margin: 30px auto 40px auto;
+  border: none;
+
+  &--close {
+    width: 18px;
+    height: 18px;
+    fill: getColor("form-icon-not-active");
+  }
+}
+.btn__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,6 +1,6 @@
 .btn {
-    background-color: $lead-button;
-  color: $lead-text;
+  background-color: getColor("lead-button");
+  color: getColor("lead-text");
   width: 200px;
   height: 50px;
   font-size: 1rem;
@@ -8,9 +8,16 @@
   line-height: 1.875;
   display: block;
   letter-spacing: 0.06rem;
-  box-shadow: 0px 4px 4px $lead-button-shadow;
+  box-shadow: 0px 4px 4px getColor("lead-button-shadow");
   border-radius: 4px;
   margin: 0 auto;
   cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0px 0px 6px getColor("form-icon-active");
+  }
+  &:active {
+    box-shadow: inset 0px 0px 6px getColor("form-icon-not-active"),
+      0px 0px 6px getColor("form-icon-active");
+  }
 }

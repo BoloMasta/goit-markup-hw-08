@@ -4,7 +4,7 @@
   &__icon-container {
     width: 270px;
     height: 120px;
-    background-color: $advantages-background;
+    background-color: getColor('advantages-background');
     border-radius: 4px;
     margin-bottom: 28px;
     display: flex;
@@ -26,7 +26,7 @@
     letter-spacing: 0.03rem;
     width: 270px;
     text-align: justify;
-    color: $advantages-text;
+    color: getColor('advantages-text');
     margin: 0;
   }
   &--last {

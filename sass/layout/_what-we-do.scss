@@ -8,7 +8,7 @@
     line-height: 1.67;
     text-align: center;
     letter-spacing: 0.03em;
-    color: $heading;
+    color: getColor('heading');
     margin-top: 0px;
     margin-bottom: 50px;
   }
@@ -34,8 +34,8 @@
   }
   &__label {
     text-transform: uppercase;
-    color: $what-we-do-label-text;
-    background: $what-we-do-label-background;
+    color: getColor('what-we-do-label-text');
+    background: getColor('what-we-do-label-background');
     position: absolute;
     bottom: 0;
     left: 50%;
