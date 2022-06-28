@@ -24,7 +24,6 @@
     top 250ms cubic-bezier(0.4, 0, 0.2, 1),
     left 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
   &__header {
     margin-top: 40px;
     text-align: center;
@@ -32,7 +31,7 @@
     font-size: 1.25rem;
     line-height: 1.4375rem;
     letter-spacing: 0.03em;
-    }
+  }
   &__label {
     display: block;
     font-size: 0.875rem;
@@ -90,8 +89,6 @@
   &__agreement {
     text-align: center;
     margin: 0;
-
-   
   }
   &__checkbox {
     &:checked + .modal__agreement-label::before {
@@ -126,38 +123,37 @@
   &__agreement-link {
     color: getColor("form-links");
   }
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  background: getColor("modal-window");
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0;
-  @extend %setFlex;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    box-shadow: 1px 1px 3px getColor("form-icon-not-active");
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: getColor("modal-window");
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    @extend %setFlex;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      box-shadow: 1px 1px 3px getColor("form-icon-not-active");
+    }
+    &:active {
+      box-shadow: inset 1px 1px 1px getColor("form-icon-not-active"),
+        1px 1px 3px getColor("form-icon-not-active");
+    }
   }
-  &:active {
-    box-shadow: inset 1px 1px 1px getColor("form-icon-not-active"),
-      1px 1px 3px getColor("form-icon-not-active");
-  }
-}
 
-.modal__btn {
-  outline: none;
-  margin: 30px auto 40px auto;
-  border: none;
+  .modal__btn {
+    outline: none;
+    margin: 30px auto 40px auto;
+    border: none;
 
-  &--close {
-    width: 18px;
-    height: 18px;
-    fill: getColor("form-icon-not-active");
+    &--close {
+      width: 18px;
+      height: 18px;
+      fill: getColor("form-icon-not-active");
+    }
   }
 }
