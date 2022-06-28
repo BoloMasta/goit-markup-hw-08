@@ -8,7 +8,7 @@
   }
   &__item {
     display: inline;
-    min-width: 300px;
+    min-width: pxToRem(300);
     &:nth-child(2) {
       margin: 0 46px;
     }
@@ -17,11 +17,9 @@
     color: getColor('menu-nav');
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    @include text(500);
+    font-size: pxToRem(14);
+    line-height: pxToRem(16);
     letter-spacing: 0.02em;
 
     &:hover,
@@ -49,11 +47,11 @@
 }
 
 .icon--mail {
-  width: 16px;
-  height: 12px;
+  width: pxToRem(16);
+  height: pxToRem(12);
 }
 
 .icon--phone {
-  width: 10px;
-  height: 16px;
+  width: pxToRem(10);
+  height: pxToRem(16);
 }

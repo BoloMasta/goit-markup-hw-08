@@ -7,11 +7,9 @@
     height: auto;
     margin-bottom: 60px;
     letter-spacing: 0.03em;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
+    @include text(400);
+    font-size: pxToRem(14);
+    line-height: pxToRem(30);
     clear: left;
     font-style: normal;
     margin: 0 0 0 15px;
@@ -20,8 +18,8 @@
   &__contact {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
-    font-size: 0.875rem;
-    line-height: 30px;
+    font-size: pxToRem(14);
+    line-height: pxToRem(30);
     text-decoration: none;
     color: getColor('footer-address-links');
     &:hover {
@@ -30,95 +28,3 @@
   }
 }
 
-.join-us {
-  width: 206px;
-  height: 80px;
-  float: left;
-  margin: -50px auto 0 70px;
-  &__header {
-    font-size: 0.875rem;
-    line-height: 1rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: getColor('footer-address');
-  }
-  &__list {
-    max-width: 206px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px auto;
-  }
-  &__link {
-  }
-  &__item {
-    width: 44px;
-    height: 44px;
-    background-color: inherit;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: getColor('footer-social-links-item-highlight');
-    background-color: getColor('footer-social-links-item-backround');
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__icon {
-    display: inline-block;
-  }
-  &__svg-use {
-  }
-}
-
-.newsletter {
-  float: left;
-  margin: -50px auto 0 78px;
-  &__header {
-    font-size: 0.875rem;
-    line-height: 1rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: getColor('footer-address');
-  }
-
-  &__input {
-    width: 358px;
-    height: 50px;
-    border: 1px solid getColor('newsletter-border');
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-    color: getColor('newsletter-mail');
-    padding: 15px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__btn {
-    width: 200px;
-    height: 50px;
-    margin-left: 12px;
-    color: getColor('newsletter-button-text');
-    background: getColor('newsletter-button');
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.875rem;
-    letter-spacing: 0.06em;
-    border: none;
-    padding: 0 28px 0 42px;
-    position: relative;
-    text-align: left;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-  }
-  &__icon {
-    width: 24px;
-    height: 24px;
-    fill: getColor('newsletter-button-text');
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-  }
-}

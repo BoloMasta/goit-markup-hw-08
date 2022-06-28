@@ -1,0 +1,6 @@
+$basic-font-size: 16px;
+
+
+@function pxToRem($pxValue) {
+    @return #{$pxValue / 16}rem;
+  }

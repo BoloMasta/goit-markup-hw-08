@@ -3,9 +3,9 @@
   text-align: center;
   padding: 94px 0;
   &__header {
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 1.67;
+    @include text(700);
+    font-size: pxToRem(36);
+    line-height: pxToRem(42);
     text-align: center;
     letter-spacing: 0.03em;
     color: getColor('heading');
@@ -43,7 +43,7 @@
     height: 70px;
     transform: translateX(-50%);
     margin: 0;
-    font-weight: 700;
+    @include text(700);
     font-size: 0.875rem;
     line-height: 1rem;
     letter-spacing: 0.03em;

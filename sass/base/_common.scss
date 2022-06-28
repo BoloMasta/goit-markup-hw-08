@@ -1,7 +1,35 @@
-body {
+.body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   color: getColor("body-base-color");
-  font-size: 16px;
+  font-size: $basic-font-size;
   position: relative;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  &__menu {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.section {
+  padding: 94px 0;
+}
+
+@mixin text($font-weight) {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: $font-weight;
+}
+
+%setFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -6,14 +6,12 @@
   margin: 20px auto;
 
   &__box {
-    width: 44px;
-    height: 44px;
+    width: pxToRem(44);
+    height: pxToRem(44);
     background-color: inherit;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: var(--icon);
+    @extend %setFlex;
+    fill: getColor('icon');
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {

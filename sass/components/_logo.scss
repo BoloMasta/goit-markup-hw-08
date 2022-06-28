@@ -1,13 +1,13 @@
 .logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 1.625rem;
-  line-height: 1.19;
+  font-size: pxToRem(26);
+  line-height: pxToRem(31);
   letter-spacing: 0.03rem;
   text-decoration: none;
-  color: getColor('menu-logo-2-part');
+  color: getColor("menu-logo-2-part");
   &--span {
-    color: getColor('menu-logo-1-part');
+    color: getColor("menu-logo-1-part");
   }
 }
 
@@ -15,9 +15,9 @@
 }
 
 .footer__logo {
-  color: getColor('footer-logo-2-part');
-    font-size: 1.625rem;
-  line-height: 1.19;
+  color: getColor("footer-logo-2-part");
+  font-size: pxToRem(26);
+  line-height: pxToRem(31);
   padding-top: 50px;
   float: left;
   margin-bottom: 10px;

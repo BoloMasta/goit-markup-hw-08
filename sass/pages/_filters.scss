@@ -1,12 +1,11 @@
 .filters {
-  display: flex;
+  @extend %setFlex;
   &__btn {
-    font-family: "Roboto";
+    @include text(500);
     background: getColor("filters-button-background");
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 1.625;
+    border-radius: pxToRem(4);
+    font-size: pxToRem(16);
+    line-height: pxToRem(26);
     text-align: center;
     letter-spacing: 0.03em;
     color: getColor("filters-button-text");
