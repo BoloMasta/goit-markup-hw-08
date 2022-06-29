@@ -19,19 +19,15 @@
     @extend %setFlex;
     fill: getColor("footer-social-links-item-highlight");
     background-color: getColor("footer-social-links-item-backround");
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(background-color);
     &:hover {
       background-color: getColor("icon-highlight-background");
     }
   }
-  &__icon {
-    width: 20px;
-    height: 20px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  &__icon,
   &__svg-use {
     width: 20px;
     height: 20px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(fill);
   }
 }

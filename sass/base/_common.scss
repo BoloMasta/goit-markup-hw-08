@@ -21,15 +21,3 @@
   padding: 94px 0;
 }
 
-@mixin text($font-weight) {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: $font-weight;
-}
-
-%setFlex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-

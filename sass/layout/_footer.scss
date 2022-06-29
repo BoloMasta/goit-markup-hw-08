@@ -22,6 +22,7 @@
     line-height: pxToRem(30);
     text-decoration: none;
     color: getColor('footer-address-links');
+    @include transition(color);
     &:hover {
       color: getColor('footer-address-links-highlight');
     }
