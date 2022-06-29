@@ -1,5 +1,5 @@
 @mixin text($font-weight) {
-  font-family: "Roboto", sans-serif;
+  font-family: $basic-font-family;
   font-style: normal;
   font-weight: $font-weight;
 }

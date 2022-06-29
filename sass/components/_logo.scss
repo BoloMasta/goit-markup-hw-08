@@ -1,5 +1,5 @@
 .logo {
-  font-family: "Raleway";
+  font-family: $logo-font-family;
   font-weight: 700;
   font-size: pxToRem(26);
   line-height: pxToRem(31);
@@ -9,9 +9,6 @@
   &--span {
     color: getColor("menu-logo-1-part");
   }
-}
-
-.menu__logo {
 }
 
 .footer__logo {
