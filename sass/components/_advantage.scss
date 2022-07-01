@@ -37,3 +37,71 @@
     height: pxToRem(70);
   }
 }
+
+// Media fot tablet
+
+@media screen and (min-width: 768px) {
+  .advantage {
+    &__icon-container {
+      width: pxToRem(354);
+    }
+    &__header {
+      font-size: pxToRem(14);
+      line-height: pxToRem(16);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      width: pxToRem(270);
+      text-align: left;
+    }
+    &__text {
+      font-size: pxToRem(14);
+      line-height: pxToRem(24);
+      letter-spacing: 0.03em;
+      width: pxToRem(354);
+    }
+  }
+}
+
+// Media for desktop
+
+@media screen and (min-width: 1200px) {
+  .advantage {
+    width: 270px;
+    margin-right: 30px;
+    &__icon-container {
+      width: pxToRem(270);
+      height: pxToRem(120);
+      background-color: getColor("advantages-background");
+      border-radius: pxToRem(4);
+      margin-bottom: pxToRem(28);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__header {
+      @include text(700);
+      font-size: 0.875em;
+      line-height: 1.14;
+      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+      width: pxToRem(270);
+      text-align: left;
+    }
+    &__text {
+      font-size: 0.875em;
+      line-height: 1.71;
+      letter-spacing: 0.03rem;
+      width: pxToRem(270);
+      text-align: justify;
+      color: getColor("advantages-text");
+      margin: 0;
+    }
+    &--last {
+      margin: 0;
+    }
+    &__icon {
+      width: pxToRem(70);
+      height: pxToRem(70);
+    }
+  }
+}
