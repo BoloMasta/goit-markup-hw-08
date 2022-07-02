@@ -1,52 +1,59 @@
 .what-we-do {
-  clear: both;
-  text-align: center;
-  padding: 94px 0;
-  &__header {
-    @include text(700);
-    font-size: pxToRem(36);
-    line-height: pxToRem(42);
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: block;
+    clear: both;
     text-align: center;
-    letter-spacing: 0.03em;
-    color: getColor('heading');
-    margin-top: 0px;
-    margin-bottom: 50px;
-  }
-  &__grid {
-    list-style: none;
-    padding: 0;
-    font-size: 0;
-  }
-  &__item {
-    display: inline-block;
-    margin-right: 30px;
-    &--last {
-        margin: 0;
+    padding: 94px 0;
+    &__header {
+      @include text(700);
+      font-size: pxToRem(36);
+      line-height: pxToRem(42);
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: getColor("heading");
+      margin-top: 0px;
+      margin-bottom: 50px;
     }
-  }
-  &__box {
-    position: relative;
-    width: 370px;
-    height: 294px;
-  }
-  &__image {
-    background-size: cover;
-  }
-  &__label {
-    text-transform: uppercase;
-    color: getColor('what-we-do-label-text');
-    background: getColor('what-we-do-label-background');
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 370px;
-    height: 70px;
-    transform: translateX(-50%);
-    margin: 0;
-    @include text(700);
-    font-size: 0.875rem;
-    line-height: 1rem;
-    letter-spacing: 0.03em;
-    padding-top: 27px;
+    &__grid {
+      list-style: none;
+      padding: 0;
+      font-size: 0;
+    }
+    &__item {
+      display: inline-block;
+      margin-right: 30px;
+      &--last {
+        margin: 0;
+      }
+    }
+    &__box {
+      position: relative;
+      width: 370px;
+      height: 294px;
+    }
+    &__image {
+      background-size: cover;
+    }
+    &__label {
+      text-transform: uppercase;
+      color: getColor("what-we-do-label-text");
+      background: getColor("what-we-do-label-background");
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 370px;
+      height: 70px;
+      transform: translateX(-50%);
+      margin: 0;
+      @include text(700);
+      font-size: 0.875rem;
+      line-height: 1rem;
+      letter-spacing: 0.03em;
+      padding-top: 27px;
+    }
   }
 }

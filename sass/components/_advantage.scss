@@ -1,37 +1,36 @@
 .advantage {
-  width: 270px;
-  margin-right: 30px;
+  width: pxToRem(450);
+  height: pxToRem(226);
+  margin-bottom: pxToRem(30);
   &__icon-container {
-    width: pxToRem(270);
+    width: pxToRem(450);
     height: pxToRem(120);
     background-color: getColor("advantages-background");
     border-radius: pxToRem(4);
-    margin-bottom: pxToRem(28);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: pxToRem(30);
+    @extend %setFlex;
   }
   &__header {
     @include text(700);
-    font-size: 0.875em;
-    line-height: 1.14;
-    letter-spacing: 0.03rem;
+    font-size: pxToRem(14);
+    line-height: pxToRem(16);
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: pxToRem(270);
-    text-align: left;
+    width: inherit;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: pxToRem(10);
   }
   &__text {
-    font-size: 0.875em;
-    line-height: 1.71;
-    letter-spacing: 0.03rem;
-    width: pxToRem(270);
+    font-size: pxToRem(14);
+    line-height: pxToRem(24);
+    letter-spacing: 0.03em;
+    width: inherit;
     text-align: justify;
     color: getColor("advantages-text");
     margin: 0;
   }
-  &--last {
-    margin: 0;
-  }
+
   &__icon {
     width: pxToRem(70);
     height: pxToRem(70);
@@ -42,22 +41,30 @@
 
 @media screen and (min-width: 768px) {
   .advantage {
+    width: pxToRem(354);
+    height: pxToRem(251);
+    margin-bottom: 0;
     &__icon-container {
       width: pxToRem(354);
     }
     &__header {
       font-size: pxToRem(14);
       line-height: pxToRem(16);
-      letter-spacing: 0.03em;
       text-transform: uppercase;
-      width: pxToRem(270);
       text-align: left;
+      margin: 30px auto 10px 0;
     }
-    &__text {
-      font-size: pxToRem(14);
-      line-height: pxToRem(24);
-      letter-spacing: 0.03em;
-      width: pxToRem(354);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantage {
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 30px;
     }
   }
 }
@@ -66,39 +73,30 @@
 
 @media screen and (min-width: 1200px) {
   .advantage {
-    width: 270px;
+    width: pxToRem(270);
+    height: pxToRem(251);
     margin-right: 30px;
+    margin-bottom: 0;
     &__icon-container {
       width: pxToRem(270);
-      height: pxToRem(120);
       background-color: getColor("advantages-background");
       border-radius: pxToRem(4);
-      margin-bottom: pxToRem(28);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-bottom: pxToRem(30);
     }
     &__header {
       @include text(700);
-      font-size: 0.875em;
-      line-height: 1.14;
-      letter-spacing: 0.03rem;
       text-transform: uppercase;
-      width: pxToRem(270);
       text-align: left;
     }
     &__text {
-      font-size: 0.875em;
-      line-height: 1.71;
-      letter-spacing: 0.03rem;
-      width: pxToRem(270);
       text-align: justify;
       color: getColor("advantages-text");
       margin: 0;
     }
-    &--last {
+    &:last-child {
       margin: 0;
     }
+
     &__icon {
       width: pxToRem(70);
       height: pxToRem(70);

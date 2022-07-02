@@ -44,7 +44,7 @@
   padding: 94px 0;
 }
 
-.project__overlay, .filters, .customers__item, .advantages__grid, .lead, .modal__close-btn, .join-us__item, .social-links__box {
+.project__overlay, .filters, .customers__item, .advantages__grid, .lead, .modal__close-btn, .join-us__item, .social-links__box, .advantage__icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,46 +182,37 @@
 }
 
 .advantage {
-  width: 270px;
-  margin-right: 30px;
+  width: 28.125rem;
+  height: 14.125rem;
+  margin-bottom: 1.875rem;
 }
 .advantage__icon-container {
-  width: 16.875rem;
+  width: 28.125rem;
   height: 7.5rem;
   background-color: #f5f4fa;
   border-radius: 0.25rem;
-  margin-bottom: 1.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: 1.875rem;
 }
 .advantage__header {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.875em;
-  line-height: 1.14;
-  letter-spacing: 0.03rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 16.875rem;
-  text-align: left;
+  width: inherit;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0.625rem;
 }
 .advantage__text {
-  font-size: 0.875em;
-  line-height: 1.71;
-  letter-spacing: 0.03rem;
-  width: 16.875rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  width: inherit;
   text-align: justify;
   color: #757575;
-  margin: 0;
-}
-.advantage--last {
   margin: 0;
 }
 .advantage__icon {
@@ -230,66 +221,56 @@
 }
 
 @media screen and (min-width: 768px) {
+  .advantage {
+    width: 22.125rem;
+    height: 15.6875rem;
+    margin-bottom: 0;
+  }
   .advantage__icon-container {
     width: 22.125rem;
   }
   .advantage__header {
     font-size: 0.875rem;
     line-height: 1rem;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: 16.875rem;
     text-align: left;
+    margin: 30px auto 10px 0;
   }
-  .advantage__text {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.03em;
-    width: 22.125rem;
+  .advantage:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantage:nth-child(1), .advantage:nth-child(2) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantage {
-    width: 270px;
+    width: 16.875rem;
+    height: 15.6875rem;
     margin-right: 30px;
+    margin-bottom: 0;
   }
   .advantage__icon-container {
     width: 16.875rem;
-    height: 7.5rem;
     background-color: #f5f4fa;
     border-radius: 0.25rem;
-    margin-bottom: 1.75rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-bottom: 1.875rem;
   }
   .advantage__header {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 0.875em;
-    line-height: 1.14;
-    letter-spacing: 0.03rem;
     text-transform: uppercase;
-    width: 16.875rem;
     text-align: left;
   }
   .advantage__text {
-    font-size: 0.875em;
-    line-height: 1.71;
-    letter-spacing: 0.03rem;
-    width: 16.875rem;
     text-align: justify;
     color: #757575;
     margin: 0;
   }
-  .advantage--last {
+  .advantage:last-child {
     margin: 0;
   }
   .advantage__icon {
@@ -826,63 +807,69 @@
   }
 }
 .what-we-do {
-  clear: both;
-  text-align: center;
-  padding: 94px 0;
-}
-.what-we-do__header {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 2.625rem;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-top: 0px;
-  margin-bottom: 50px;
-}
-.what-we-do__grid {
-  list-style: none;
-  padding: 0;
-  font-size: 0;
-}
-.what-we-do__item {
-  display: inline-block;
-  margin-right: 30px;
-}
-.what-we-do__item--last {
-  margin: 0;
-}
-.what-we-do__box {
-  position: relative;
-  width: 370px;
-  height: 294px;
-}
-.what-we-do__image {
-  background-size: cover;
-}
-.what-we-do__label {
-  text-transform: uppercase;
-  color: #ffffff;
-  background: rgba(47, 48, 58, 0.8);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 370px;
-  height: 70px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: 0.03em;
-  padding-top: 27px;
+  display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: block;
+    clear: both;
+    text-align: center;
+    padding: 94px 0;
+  }
+  .what-we-do__header {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .what-we-do__grid {
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+  }
+  .what-we-do__item {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .what-we-do__item--last {
+    margin: 0;
+  }
+  .what-we-do__box {
+    position: relative;
+    width: 370px;
+    height: 294px;
+  }
+  .what-we-do__image {
+    background-size: cover;
+  }
+  .what-we-do__label {
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 370px;
+    height: 70px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.03em;
+    padding-top: 27px;
+  }
+}
 .advantages {
   margin: 0 auto;
   padding-bottom: 0px;
