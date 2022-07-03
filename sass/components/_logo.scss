@@ -13,10 +13,7 @@
 
 .footer__logo {
   color: getColor("footer-logo-2-part");
-  font-size: pxToRem(24);
-  line-height: pxToRem(28);
   padding-top: 60px;
-  letter-spacing: 0.03em;
   display: block;
   text-align: center;
   margin-bottom: 20px;
@@ -25,40 +22,25 @@
 // MEDIA FOR TABLET
 
 @media screen and (min-width: 768px) {
-
-
-.footer__logo {
-  color: getColor("footer-logo-2-part");
-  font-size: pxToRem(26);
-  line-height: pxToRem(31);
-  padding-top: 50px;
-  float: left;
-  margin-bottom: 10px;
-  margin-left: 15px;
-}
+  .footer__logo {
+    margin-left: 9.5%;
+    padding: 0;
+    margin-top: 60px;
+    float: left;
+    margin-bottom: 20px;
+  }
 }
 
 // MEDIA FOR DESKTOP
 
 @media screen and (min-width: 1200px) {
-.logo {
-  font-size: pxToRem(26);
-  line-height: pxToRem(31);
-  letter-spacing: 0.03rem;
-  text-decoration: none;
-  color: getColor("menu-logo-2-part");
-  &--span {
-    color: getColor("menu-logo-1-part");
+  .logo {
+    font-size: pxToRem(26);
+    line-height: pxToRem(31);
   }
-}
 
-.footer__logo {
-  color: getColor("footer-logo-2-part");
-  font-size: pxToRem(26);
-  line-height: pxToRem(31);
-  padding-top: 50px;
-  float: left;
-  margin-bottom: 10px;
-  margin-left: 15px;
-}
+  .footer__logo {
+    margin-left: 20px;
+    margin-top: 60px;
+  }
 }

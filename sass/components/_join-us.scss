@@ -15,7 +15,6 @@
   &__item {
     width: 44px;
     height: 44px;
-    background-color: inherit;
     border-radius: 50%;
     @extend %setFlex;
     fill: getColor("footer-social-links-item-highlight");
@@ -40,24 +39,9 @@
     width: 206px;
     height: 80px;
     float: left;
-    margin: -50px auto 0 70px;
+    margin: -120px 0 0 450px;
     &__header {
-      font-size: pxToRem(14);
-      line-height: pxToRem(16);
-      letter-spacing: 0.03em;
-    }
-
-    &__item {
-      width: 44px;
-      height: 44px;
-      background-color: inherit;
-      border-radius: 50%;
-    }
-    &__icon,
-    &__svg-use {
-      width: 20px;
-      height: 20px;
-      @include transition(fill);
+      margin: 0;
     }
   }
 }
@@ -69,25 +53,7 @@
     width: 206px;
     height: 80px;
     float: left;
-    margin: -50px auto 0 70px;
-    &__header {
-      font-size: pxToRem(14);
-      line-height: pxToRem(16);
-      letter-spacing: 0.03em;
-    }
-
-    &__item {
-      width: 44px;
-      height: 44px;
-      background-color: inherit;
-      border-radius: 50%;
-    }
-
-    &__icon,
-    &__svg-use {
-      width: 20px;
-      height: 20px;
-      @include transition(fill);
-    }
+    margin-left: 350px;
+    text-align: left;
   }
 }
