@@ -1,24 +1,56 @@
 .team-card {
-  width: 270px;
+  width: 450px;
   text-align: center;
   margin: 0;
+
   &__image {
-    width: 270px;
-    height: 260px;
+    width: 450px;
+    height: 460px;
+    display: block;
   }
+
   &__label {
-    font-size: 1rem;
-    line-height: 1.1875;
+    @include text(400);
+    font-size: pxToRem(16);
+    line-height: pxToRem(19);
     letter-spacing: 0.03em;
-    color: getColor('our-team-text');
+    color: getColor("our-team-text");
+    padding-top: 30px;
+
     &--bold {
       @include text(500);
-      font-size: 1rem;
-      line-height: 1.1875;
+      font-size: pxToRem(16);
+      line-height: pxToRem(19);
       display: block;
       letter-spacing: 0.03em;
-      color: getColor('our-team-heading');
-      padding: 15px;
+      color: getColor("our-team-heading");
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    width: 354px;
+
+    &__image {
+      width: 354px;
+      height: 374px;
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .team-card {
+    width: 270px;
+
+    &__image {
+      width: 270px;
+      height: 260px;
     }
   }
 }

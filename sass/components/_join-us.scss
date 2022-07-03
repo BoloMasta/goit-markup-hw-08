@@ -1,8 +1,9 @@
 .join-us {
   width: 206px;
   height: 80px;
-  float: left;
-  margin: -50px auto 0 70px;
+  display: block;
+  text-align: center;
+  margin: 60px auto;
   &__header {
     font-size: pxToRem(14);
     line-height: pxToRem(16);
@@ -29,5 +30,64 @@
     width: 20px;
     height: 20px;
     @include transition(fill);
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) {
+  .join-us {
+    width: 206px;
+    height: 80px;
+    float: left;
+    margin: -50px auto 0 70px;
+    &__header {
+      font-size: pxToRem(14);
+      line-height: pxToRem(16);
+      letter-spacing: 0.03em;
+    }
+
+    &__item {
+      width: 44px;
+      height: 44px;
+      background-color: inherit;
+      border-radius: 50%;
+    }
+    &__icon,
+    &__svg-use {
+      width: 20px;
+      height: 20px;
+      @include transition(fill);
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .join-us {
+    width: 206px;
+    height: 80px;
+    float: left;
+    margin: -50px auto 0 70px;
+    &__header {
+      font-size: pxToRem(14);
+      line-height: pxToRem(16);
+      letter-spacing: 0.03em;
+    }
+
+    &__item {
+      width: 44px;
+      height: 44px;
+      background-color: inherit;
+      border-radius: 50%;
+    }
+
+    &__icon,
+    &__svg-use {
+      width: 20px;
+      height: 20px;
+      @include transition(fill);
+    }
   }
 }

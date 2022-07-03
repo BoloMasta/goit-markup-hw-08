@@ -1,24 +1,33 @@
 .customers {
   text-align: center;
-  padding: 94px 0;
   &__header {
     @include text(700);
-    font-size: pxToRem(36);
-    line-height: pxToRem(42);
+    font-size: pxToRem(28);
+    line-height: pxToRem(33);
     text-align: center;
     letter-spacing: 0.03em;
     color: getColor("heading");
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
+
   &__list {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0;
   }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: getColor("icon");
+    @include transition(fill);
+    padding: 5px;
+  }
+
   &__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid getColor("icon");
     border-radius: 4px;
@@ -26,10 +35,7 @@
     @extend %setFlex;
     @include transition(box-shadow);
     @include transition(border);
-    margin-right: 30px;
-    &--last {
-      margin: 0;
-    }
+
     &:hover {
       border: 1px solid getColor("icon-highlight-background");
       cursor: pointer;
@@ -40,12 +46,60 @@
       }
     }
   }
+}
 
-  &__icon {
-    width: 106px;
-    height: 60px;
-    fill: getColor("icon");
-    @include transition(fill);
-    padding: 5px;
+@media screen and (max-width: 767px) {
+  .customers {
+    &__item {
+      &:nth-child(-n + 4) {
+        margin-bottom: 30px;
+      }
+      &:nth-child(2n-1) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers {
+    &__item {
+      width: 226px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(-n + 3) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .customers {
+    &__header {
+      font-size: pxToRem(36);
+      line-height: pxToRem(42);
+
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      width: 170px;
+      height: 92px;
+      &:nth-child(-n + 5) {
+        margin-right: 30px;
+      }
+    }
   }
 }

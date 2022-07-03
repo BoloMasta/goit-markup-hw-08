@@ -1,30 +1,80 @@
 .our-team {
   background: getColor("out-team-background");
   text-align: center;
+
   &__header {
     @include text(700);
-    font-size: pxToRem(36);
-    line-height: pxToRem(42);
+    font-size: pxToRem(28);
+    line-height: pxToRem(33);
     text-align: center;
     letter-spacing: 0.03em;
     color: getColor("heading");
     margin-top: 0px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
+
   &__grid {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0;
   }
+
   &__item {
-    width: 270px;
-    height: 428px;
+    width: 450px;
+    height: 622px;
     float: left;
     background: getColor("our-team-card-background");
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    margin: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) {
+  .our-team {
+    &__header {
+      font-size: pxToRem(28);
+      line-height: pxToRem(33);
+    }
+
+    &__item {
+      width: 354px;
+      height: 536px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .our-team {
+    &__item {
+      &:nth-child(2n - 1) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .our-team {
+    &__header {
+      font-size: pxToRem(36);
+      line-height: pxToRem(42);
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      width: 270px;
+      height: 428px;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 }
