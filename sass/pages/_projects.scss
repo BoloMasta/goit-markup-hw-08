@@ -1,5 +1,5 @@
 .projects {
-  margin-top: -140px;
+  margin-top: -70px;
 }
 
 .project-grid {
@@ -12,10 +12,10 @@
   flex-wrap: wrap;
   &__item {
     float: left;
-    width: 370px;
+    width: 450px;
     height: 404px;
-    background: getColor('projects-background');
-    border: 1px solid getColor('projects-border');
+    background: getColor("projects-background");
+    border: 1px solid getColor("projects-border");
     margin-left: 20px;
     margin-top: 20px;
     @include transition(box-shadow);
@@ -26,6 +26,31 @@
       & .project__overlay {
         transform: translatey(0);
       }
+    }
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-grid {
+    &__item {
+      width: 354px;
+      height: 404px;
+      &:nth-child(-n + 2) {
+        height: 440px;
+      }
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .project-grid {
+    &__item {
+      width: 370px;
+      height: 404px;
     }
   }
 }

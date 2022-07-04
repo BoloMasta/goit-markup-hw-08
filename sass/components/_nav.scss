@@ -46,12 +46,36 @@
   }
 }
 
-.icon--mail {
-  width: pxToRem(16);
-  height: pxToRem(12);
+
+
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px)  {
+  .nav{
+   
+    &__list {
+      width: 290px;
+      margin: 0 0 0 83px;
+    }
+
+    &__item {
+      &:nth-child(2) {
+        margin: 0 60px;
+      }
+    }
+  }
 }
 
-.icon--phone {
-  width: pxToRem(10);
-  height: pxToRem(16);
+
+
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+.nav{
+  &__list {
+    margin: 0 0 0 93px;
+  }
+}
 }

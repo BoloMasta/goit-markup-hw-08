@@ -1,30 +1,98 @@
 .menu {
-  border-bottom: 1px solid getColor('menu-border');
+  border-bottom: 1px solid getColor("menu-border");
   &__contact {
     text-decoration: none;
-    color: getColor('menu-contact-links');
+    color: getColor("menu-contact-links");
     text-align: right;
     display: flex;
     justify-content: end;
     align-items: center;
     @include text(500);
-    font-size: 14px;
-    line-height: 16px;
+    font-size: pxToRem(14);
+    line-height: pxToRem(16);
     letter-spacing: 0.02em;
     @include transition(color);
-    &--end {
-      margin-left: 30px;
-    }
+
     &:hover {
-      color: getColor('menu-highlight');
+      color: getColor("menu-highlight");
       & .menu__icon {
-        fill: getColor('menu-highlight');
+        fill: getColor("menu-highlight");
       }
     }
   }
+
+  .icon--mail {
+    width: pxToRem(16);
+    height: pxToRem(12);
+  }
+
+  .icon--phone {
+    width: pxToRem(10);
+    height: pxToRem(16);
+  }
+
   &__icon {
-    fill: getColor('menu-contact-links');
+    fill: getColor("menu-contact-links");
     margin-right: 10px;
     @include transition(fill);
+  }
+
+  &__contact-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__contact-list-item {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) {
+  .menu {
+    &__contact {
+      font-size: pxToRem(12);
+      line-height: pxToRem(14);
+      display: block;
+      width: 165px;
+      height: 14px;
+      text-align: left;
+    }
+
+    &__contact-list {
+      margin-left: 100px;
+    }
+  }
+
+  .icon--phone {
+    margin-bottom: -2px;
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    &__contact {
+      text-align: center;
+      height: 17px;
+      font-size: pxToRem(14);
+      line-height: pxToRem(16);
+    }
+
+    &__contact-list-item {
+      float: left;
+
+      &:first-child {
+        margin-bottom: 0px;
+      }
+
+      &:last-child {
+        margin-left: 30px;
+      }
+    }
   }
 }

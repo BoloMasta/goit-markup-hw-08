@@ -31,7 +31,7 @@
     height: 92px;
     border: 1px solid getColor("icon");
     border-radius: 4px;
-    float: left;
+    
     @extend %setFlex;
     @include transition(box-shadow);
     @include transition(border);
@@ -48,9 +48,23 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 467px) {
   .customers {
     &__item {
+      &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+}
+
+
+
+@media screen and (min-width: 467px) and (max-width: 767px) {
+  .customers {
+    &__item {
+      float: left;
       &:nth-child(-n + 4) {
         margin-bottom: 30px;
       }
@@ -66,6 +80,7 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers {
     &__item {
+      float: left;
       width: 226px;
       &:nth-child(3n) {
         margin-right: 0;
@@ -89,14 +104,15 @@
     &__header {
       font-size: pxToRem(36);
       line-height: pxToRem(42);
-
       margin-top: 0px;
       margin-bottom: 50px;
     }
 
     &__item {
+      float: left;
       width: 170px;
       height: 92px;
+
       &:nth-child(-n + 5) {
         margin-right: 30px;
       }

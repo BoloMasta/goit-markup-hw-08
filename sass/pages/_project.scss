@@ -1,20 +1,20 @@
 .project {
   margin: 0 auto;
   &__box {
-    width: 370px;
+    width: 450px;
     height: 294px;
     overflow: hidden;
     position: relative;
   }
 
   &__image {
-    width: 370px;
+    width: 450px;
     height: 294px;
     display: inline-block;
   }
 
   &__overlay {
-    width: 370px;
+    width: 450px;
     height: 294px;
     background-color: getColor("projects-overlay-background");
     @extend %setFlex;
@@ -27,8 +27,8 @@
 
   &__description {
     @include text(400);
-    width: 301px;
-    height: 196px;
+    width: 402px;
+    height: 140px;
     letter-spacing: 0.03em;
     font-size: pxToRem(18);
     line-height: pxToRem(28);
@@ -36,13 +36,12 @@
   }
 
   &__figcaption {
-    width: 322px;
     height: 95px;
     font-size: pxToRem(16);
     line-height: pxToRem(30);
     letter-spacing: 0.03em;
     color: getColor("projects-text");
-    margin: 15px auto 0 auto;
+    padding: 20px 24px;
   }
 
   &__header {
@@ -52,5 +51,46 @@
     letter-spacing: 0.06em;
     color: getColor("projects-heading");
     margin: 0 0 10px 0;
+  }
+}
+
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) {
+  .project {
+    &__image {
+      width: 354px;
+      height: 294px;
+    }
+
+    &__overlay {
+      width: 354px;
+      height: 294px;
+    }
+
+    &__description {
+      width: 306px;
+      height: 196px;
+    }
+  }
+}
+
+// MEDIA FOR DESKTOP
+
+@media screen and (min-width: 1200px) {
+  .project {
+    &__image {
+      width: 370px;
+      height: 294px;
+    }
+
+    &__overlay {
+      width: 370px;
+      height: 294px;
+    }
+
+    &__description {
+      width: 301px;
+    }
   }
 }

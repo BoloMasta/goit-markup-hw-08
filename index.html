@@ -18,7 +18,7 @@
     <title>WebStudio</title>
   </head>
   <body class="body">
-    <!--===== MENU =====
+    <!--===== MENU =====-->
 
     <header class="menu">
       <div class="container container__menu">
@@ -39,19 +39,24 @@
             <li class="nav__item"><a class="nav__link" href="#">Kontakt</a></li>
           </ul>
         </nav>
-
-        <a class="menu__contact" href="mailto:info@devstudio.com">
-          <svg class="menu__icon icon--mail">
-            <use xlink:href="./images/icons.svg#icon-mail"></use>
-          </svg>
-          info@devstudio.com
-        </a>
-        <a class="menu__contact menu__contact--end" href="tel:+48111111111">
-          <svg class="menu__icon icon--phone">
-            <use xlink:href="./images/icons.svg#icon-smartphone"></use>
-          </svg>
-          +48 111 111 111
-        </a>
+        <ul class="menu__contact-list">
+          <li class="menu__contact-list-item">
+            <a class="menu__contact" href="mailto:info@devstudio.com">
+              <svg class="menu__icon icon--mail">
+                <use xlink:href="./images/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="menu__contact-list-item">
+            <a class="menu__contact" href="tel:+48111111111">
+              <svg class="menu__icon icon--phone">
+                <use xlink:href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +48 111 111 111
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -63,12 +68,12 @@
           <h1 class="lead__header">
             Efektywne rozwiązania dla waszego biznesu
           </h1>
-          <button type="button" class="btn" data-modal-open>
+          <button type="button" class="btn lead__btn" data-modal-open>
             Zamów usługę
           </button>
         </div>
       </section>
- 
+
       <!--===== NASZE ATUTY =====-->
 
       <section class="advantages section">
@@ -250,7 +255,6 @@
               </div>
             </li>
 
-            
             <li class="our-team__item">
               <figure class="team-card">
                 <img
@@ -329,7 +333,6 @@
               </div>
             </li>
 
-  
             <li class="our-team__item">
               <figure class="team-card">
                 <img
@@ -407,7 +410,6 @@
                 </a>
               </div>
             </li>
-
 
             <li class="our-team__item">
               <figure class="team-card">
@@ -715,7 +717,8 @@
           <button type="submit" class="btn modal__btn">Wyślij</button>
         </form>
       </div>
-    </div> -->
+    </div>
+    -->
 
     <script src="./js/modal.js"></script>
   </body>

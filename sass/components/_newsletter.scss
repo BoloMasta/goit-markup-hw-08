@@ -59,6 +59,14 @@
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .newsletter {
+    &__input {
+      width: 280px;
+    }
+  }
+}
+
 // MEDIA FOR TABLET
 
 @media screen and (min-width: 768px) {
@@ -67,11 +75,6 @@
     width: 450px;
     height: 156px;
     padding-top: 35px;
-
-    &__input {
-      width: 450px;
-      height: 50px;
-    }
   }
 }
 
@@ -80,30 +83,22 @@
 @media screen and (min-width: 1200px) {
   .newsletter {
     float: left;
-    margin: -50px auto 0 78px;
+    margin: -140px 0 0 610px;
+    width: 570px;
+    height: 86px;
+    padding: 0;
     &__header {
-      font-size: pxToRem(14);
-      line-height: pxToRem(16);
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: getColor("footer-address");
+      text-align: left;
+      margin-bottom: 0;
     }
 
     &__input {
       width: 358px;
       height: 50px;
-      border: 1px solid getColor("newsletter-border");
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-      border-radius: 4px;
-      background-color: transparent;
-      color: getColor("newsletter-mail");
-      padding: 15px;
-      @include transition(border);
-      &:active,
-      &:focus {
-        border: 1px solid getColor("footer-address-links-highlight");
-        outline: none;
-      }
+    }
+
+    &__btn {
+      margin-left: 6px;
     }
   }
 }
