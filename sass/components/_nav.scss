@@ -1,81 +1,101 @@
+// HAMBURGER
+
 .nav {
   flex-grow: 1;
-
+  display: block;
   &__list {
+    width: 290px;
     list-style: none;
     padding: 0;
-    margin: 0 0 0 93px;
+    margin: 0 48px 0 83px;
   }
   &__item {
-    display: inline;
+    display: block;
     min-width: pxToRem(300);
-    &:nth-child(2) {
-      margin: 0 46px;
+    margin-bottom: 36px;
+    &:first-child {
+      margin-top: 48px;
     }
   }
   &__link {
-    color: getColor('menu-nav');
+    color: getColor("menu-nav");
     text-decoration: none;
     @include transition(color);
     @include text(500);
-    font-size: pxToRem(14);
-    line-height: pxToRem(16);
+    font-size: pxToRem(40);
+    line-height: pxToRem(47);
     letter-spacing: 0.02em;
 
     &:hover,
     &:focus {
-      color: getColor('menu-highlight');
+      color: getColor("menu-highlight");
     }
 
     &--active {
-      color: getColor('menu-highlight');
-      position: relative;
-
-      &::after {
-        content: "";
-        display: block;
-        background-color: getColor('menu-highlight');
-        height: 4px;
-        width: 100%;
-        position: absolute;
-        top: 45px;
-        left: 0px;
-        border-radius: 2px;
-      }
+      color: getColor("menu-highlight");
     }
   }
 }
 
-
-
-
 // MEDIA FOR TABLET
 
-@media screen and (min-width: 768px)  {
-  .nav{
-   
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-grow: 1;
+    display: block;
     &__list {
       width: 290px;
+      list-style: none;
+      padding: 0;
       margin: 0 0 0 83px;
     }
-
     &__item {
+      display: inline;
+      min-width: pxToRem(300);
       &:nth-child(2) {
         margin: 0 60px;
       }
     }
+    &__link {
+      color: getColor("menu-nav");
+      text-decoration: none;
+      @include transition(color);
+      @include text(500);
+      font-size: pxToRem(14);
+      line-height: pxToRem(16);
+      letter-spacing: 0.02em;
+
+      &:hover,
+      &:focus {
+        color: getColor("menu-highlight");
+      }
+
+      &--active {
+        color: getColor("menu-highlight");
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          background-color: getColor("menu-highlight");
+          height: 4px;
+          width: 100%;
+          position: absolute;
+          top: 45px;
+          left: 0px;
+          border-radius: 2px;
+        }
+      }
+    }
   }
 }
-
-
-
 
 // MEDIA FOR DESKTOP
 
 @media screen and (min-width: 1200px) {
-.nav{
-  &__list {
-    margin: 0 0 0 93px;
+  .nav {
+    &__list {
+      margin: 0 0 0 93px;
+    }
   }
-}
 }

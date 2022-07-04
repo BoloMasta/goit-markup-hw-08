@@ -1,15 +1,20 @@
+// HAMBURGER
+
 .menu {
   border-bottom: 1px solid getColor("menu-border");
+
   &__contact {
+    text-align: left;
     text-decoration: none;
     color: getColor("menu-contact-links");
-    text-align: right;
-    display: flex;
-    justify-content: end;
+
+    display: block;
+
     align-items: center;
     @include text(500);
-    font-size: pxToRem(14);
-    line-height: pxToRem(16);
+    font-size: pxToRem(34);
+    line-height: pxToRem(40);
+
     letter-spacing: 0.02em;
     @include transition(color);
 
@@ -29,6 +34,7 @@
   .icon--phone {
     width: pxToRem(10);
     height: pxToRem(16);
+    margin-bottom: -2px;
   }
 
   &__icon {
@@ -40,11 +46,15 @@
   &__contact-list {
     list-style: none;
     padding: 0;
+    margin-left: 100px;
+  
+    
   }
 
   &__contact-list-item {
     &:first-child {
       margin-bottom: 10px;
+     
     }
   }
 }
@@ -53,22 +63,66 @@
 
 @media screen and (min-width: 768px) {
   .menu {
+    border-bottom: 1px solid getColor("menu-border");
+
     &__contact {
-      font-size: pxToRem(12);
-      line-height: pxToRem(14);
-      display: block;
       width: 165px;
       height: 14px;
       text-align: left;
+      text-decoration: none;
+      color: getColor("menu-contact-links");
+      text-align: right;
+      display: block;
+      justify-content: end;
+      align-items: center;
+      @include text(500);
+      font-size: pxToRem(12);
+      line-height: pxToRem(14);
+      letter-spacing: 0.02em;
+      @include transition(color);
+
+      &:hover {
+        color: getColor("menu-highlight");
+        & .menu__icon {
+          fill: getColor("menu-highlight");
+        }
+      }
+    }
+
+    .icon--mail {
+      width: pxToRem(16);
+      height: pxToRem(12);
+    }
+
+    .icon--phone {
+      width: pxToRem(10);
+      height: pxToRem(16);
+      margin-bottom: -2px;
+    }
+
+    &__icon {
+      fill: getColor("menu-contact-links");
+      margin-right: 10px;
+      @include transition(fill);
     }
 
     &__contact-list {
+      list-style: none;
+      padding: 0;
       margin-left: 100px;
+    }
+
+    &__contact-list-item {
+      &:first-child {
+        margin-bottom: 10px;
+      }
     }
   }
 
-  .icon--phone {
-    margin-bottom: -2px;
+  @media screen and (max-width: 767px) {
+    .menu__logo {
+      margin-left: 15px;
+    }
   }
 }
 

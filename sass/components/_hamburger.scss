@@ -1,0 +1,38 @@
+.hamburger {
+  width: 24px;
+  height: 16px;
+  fill: black;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+
+  &__contact {
+    text-decoration: none;
+    &:first-child {
+      color: red;
+    }
+  }
+
+  &__menu {
+    left: -100%;
+    
+    &--active {
+      width: 100vw;
+      height: 100vh;
+      background-color: wheat;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+
+    &__menu, &__contact-list {
+      display: none;
+    }
+  }
+}
