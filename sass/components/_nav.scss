@@ -1,41 +1,7 @@
-// HAMBURGER
-
 .nav {
-  flex-grow: 1;
-  display: block;
-  &__list {
-    width: 290px;
-    list-style: none;
-    padding: 0;
-    margin: 0 48px 0 83px;
-  }
-  &__item {
-    display: block;
-    min-width: pxToRem(300);
-    margin-bottom: 36px;
-    &:first-child {
-      margin-top: 48px;
-    }
-  }
-  &__link {
-    color: getColor("menu-nav");
-    text-decoration: none;
-    @include transition(color);
-    @include text(500);
-    font-size: pxToRem(40);
-    line-height: pxToRem(47);
-    letter-spacing: 0.02em;
-
-    &:hover,
-    &:focus {
-      color: getColor("menu-highlight");
-    }
-
-    &--active {
-      color: getColor("menu-highlight");
-    }
-  }
+  display: none;
 }
+
 
 // MEDIA FOR TABLET
 

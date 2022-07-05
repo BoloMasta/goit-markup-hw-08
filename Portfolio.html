@@ -17,7 +17,71 @@
 
     <title>WebStudio</title>
   </head>
-  <body>
+  <body class="body">
+    <!--===== HAMBURGER =====-->
+
+    <div class="hamburger__menu">
+      <button type="button" class="hamburger__close-btn">
+        <svg class="hamburger__btn--close">
+          <use xlink:href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <nav class="hamburger__nav">
+        <ul class="hamburger__list">
+          <li class="hamburger__item">
+            <a class="hamburger__link" href="./index.html">Agencja</a>
+          </li>
+          <li class="hamburger__item">
+            <a
+              class="hamburger__link hamburger__link--active"
+              href="./Portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="hamburger__item">
+            <a class="hamburger__link" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="hamburger__contact-list">
+        <li class="hamburger__contact-list-item">
+          <a class="hamburger__contact" href="tel:+48111111111">
+            +48 111 111 111
+          </a>
+        </li>
+
+        <li class="hamburger__contact-list-item">
+          <a class="hamburger__contact" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="hamburger__social-links">
+        <li class="hamburger__social-item">
+          <a href="https://instagram.com" class="hamburger__social-link"
+            >Instagram</a
+          >
+        </li>
+        <li class="hamburger__social-item">
+          <a href="https://twitter.com" class="hamburger__social-link"
+            >Twitter</a
+          >
+        </li>
+        <li class="hamburger__social-item">
+          <a href="https://facebook.com" class="hamburger__social-link"
+            >Facebook</a
+          >
+        </li>
+        <li class="hamburger__social-item">
+          <a href="https://linkedin.com" class="hamburger__social-link"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+
     <!--===== MENU =====-->
 
     <header class="menu">
@@ -58,6 +122,9 @@
             </a>
           </li>
         </ul>
+        <svg class="hamburger">
+          <use xlink:href="./images/icons.svg#hamburger"></use>
+        </svg>
       </div>
     </header>
 
@@ -404,5 +471,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

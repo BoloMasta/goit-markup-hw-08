@@ -6,24 +6,116 @@
   right: 5%;
   cursor: pointer;
 
-  &__contact {
-    text-decoration: none;
-    &:first-child {
-      color: red;
-    }
-  }
-
   &__menu {
+    position: absolute;
     left: -100%;
-    
+    @include transition(all);
+  
+
     &--active {
       width: 100vw;
       height: 100vh;
-      background-color: wheat;
+      background-color: getColor("hamburger-background");
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 1;
     }
+  }
+
+  &__close-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+  
+    right: 20px;
+    top: 20px;
+    &:hover, &:focus {
+      fill: getColor("menu-highlight")
+    }
+  }
+
+  &__btn--close {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 55px;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @include text(500);
+    font-size: pxToRem(40);
+    line-height: pxToRem(47);
+    letter-spacing: 0.02em;
+    color: getColor("menu-nav");
+    text-decoration: none;
+    &--active {
+      color: getColor("menu-highlight");
+    }
+  }
+
+  &__contact-list {
+    list-style: none;
+    margin-top: 320px;
+  }
+
+  &__contact-list-item {
+    margin-bottom: 32px;
+
+    &:first-child .hamburger__contact {
+      @include text(500);
+      font-size: pxToRem(34);
+      line-height: pxToRem(40);
+      letter-spacing: 0.02em;
+      color: getColor("menu-highlight");
+    }
+  }
+  &__contact {
+    text-decoration: none;
+    color: getColor("menu-contact-links");
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+
+  &__social-links {
+    list-style: none;
+    margin-top: 64px;
+  }
+
+  &__social-item {
+    display: inline;
+    float: left;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+      &::after {
+        content: "";
+        background-color: getColor("menu-nav");
+        display: block;
+        position: absolute;
+        right: -10px;
+        top: -2px;
+        height: 22px;
+        width: 1px;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__social-link {
+    text-decoration: none;
+    color: getColor("menu-highlight");
   }
 }
 
@@ -31,7 +123,8 @@
   .hamburger {
     display: none;
 
-    &__menu, &__contact-list {
+    &__menu,
+    &__contact-list {
       display: none;
     }
   }
