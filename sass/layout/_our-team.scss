@@ -18,6 +18,8 @@
     display: inline-block;
     padding: 0;
     margin: 0;
+    text-align: center;
+    width: 450px;
   }
 
   &__item {
@@ -34,8 +36,12 @@
 
 // MEDIA FOR TABLET
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .our-team {
+    &__grid {
+      width: 738px;
+    }
+
     &__header {
       font-size: pxToRem(28);
       line-height: pxToRem(33);
@@ -44,14 +50,6 @@
     &__item {
       width: 354px;
       height: 536px;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .our-team {
-    &__item {
       &:nth-child(2n - 1) {
         margin-right: 30px;
       }
@@ -63,6 +61,10 @@
 
 @media screen and (min-width: 1200px) {
   .our-team {
+    &__grid {
+      width: 1170px;
+    }
+
     &__header {
       font-size: pxToRem(36);
       line-height: pxToRem(42);

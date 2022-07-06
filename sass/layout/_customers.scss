@@ -49,7 +49,7 @@
 }
 
 
-@media screen and (max-width: 467px) {
+@media screen and (max-width: 472px) {
   .customers {
     &__item {
       &:not(:last-child) {
@@ -61,8 +61,12 @@
 
 
 
-@media screen and (min-width: 467px) and (max-width: 767px) {
+@media screen and (min-width: 473px) and (max-width: 767px) {
   .customers {
+    &__list {
+      width: 450px;
+    }
+
     &__item {
       float: left;
       &:nth-child(-n + 4) {
@@ -79,6 +83,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers {
+    &__list {
+      width: 738px;
+    }
+
     &__item {
       float: left;
       width: 226px;

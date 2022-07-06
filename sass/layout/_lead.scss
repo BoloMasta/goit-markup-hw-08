@@ -5,7 +5,7 @@
       getColor("lead-background"),
       getColor("lead-background")
     ),
-    url("../images/BG.jpg");
+    url("../../images/lead/lead-background-mobile-@1X-480x400.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -20,7 +20,7 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.06em;
-    margin: 30px 0;
+    margin: 30px auto;
     max-width: pxToRem(365);
   }
 
@@ -29,25 +29,74 @@
   }
 }
 
-// Media fot tablet
-
-@media screen and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
   .lead {
-    &__header {
-      font-size: pxToRem(26);
-    }
+    background-image: linear-gradient(
+        to bottom,
+        getColor("lead-background"),
+        getColor("lead-background")
+      ),
+      url("../../images/lead/lead-background-mobile-@2X-960x800.jpg");
   }
 }
 
-// Media for desktop
+// MEDIA FOR TABLET
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .lead {
+    background-image: linear-gradient(
+        to bottom,
+        getColor("lead-background"),
+        getColor("lead-background")
+      ),
+      url("../../images/lead/lead-background-tablet-@1X-768x400.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .lead {
+    background-image: linear-gradient(
+        to bottom,
+        getColor("lead-background"),
+        getColor("lead-background")
+      ),
+      url("../../images/lead/lead-background-tablet-@2X-1536x800.jpg");
+  }
+}
+
+// MEDIA FOR DESKTOP
 
 @media screen and (min-width: 1200px) {
   .lead {
     height: pxToRem(600);
+    background-image: linear-gradient(
+        to bottom,
+        getColor("lead-background"),
+        getColor("lead-background")
+      ),
+      url("../../images/lead/lead-background-desktop-@1X-1600x600.jpg");
+
     &__header {
       font-size: pxToRem(44);
       line-height: pxToRem(60);
       max-width: pxToRem(696);
     }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .lead {
+    background-image: linear-gradient(
+        to bottom,
+        getColor("lead-background"),
+        getColor("lead-background")
+      ),
+      url("../../images/lead/lead-background-desktop-@2X-3200x1200.jpg");
   }
 }

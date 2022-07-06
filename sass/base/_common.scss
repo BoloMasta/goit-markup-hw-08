@@ -7,8 +7,10 @@
 }
 
 .container {
-  max-width: 450px;
+  max-width: calc(100% - 22px);
   margin: 0 auto;
+  
+
   &__menu {
     display: flex;
     height: 60px;
@@ -21,11 +23,19 @@
   padding: 60px 0;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 460px;
+  }
+}
+
+
 // MEDIA FOR TABLET
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 738px;
+    max-width: 768px;
+    padding: 0;
     &__menu {
       height: 80px;
       display: flex;
