@@ -32,12 +32,12 @@
     }
     &__box {
       position: relative;
-      width: 370px;
-      height: 294px;
+      width: pxToRem(370);
+      height: pxpxToRem(294);
     }
     &__image {
-      width: 370px;
-      height: 294px;
+      width: pxToRem(370);
+      height: pxpxToRem(294);
       background-size: cover;
     }
     &__label {
@@ -47,8 +47,8 @@
       position: absolute;
       bottom: 0;
       left: 50%;
-      width: 370px;
-      height: 70px;
+      width: pxToRem(370);
+      height: pxToRem(70);
       transform: translateX(-50%);
       margin: 0;
       @include text(700);
