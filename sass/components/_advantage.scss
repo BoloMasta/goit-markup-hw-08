@@ -1,9 +1,9 @@
 .advantage {
-  width: pxToRem(450);
-  height: pxToRem(226);
+  width: calc(100% - 30px);
+  //height: pxToRem(226);
   margin-bottom: pxToRem(30);
   &__icon-container {
-    width: pxToRem(450);
+    //width: pxToRem(450);
     height: pxToRem(120);
     background-color: getColor("advantages-background");
     border-radius: pxToRem(4);
@@ -25,7 +25,7 @@
     font-size: pxToRem(14);
     line-height: pxToRem(24);
     letter-spacing: 0.03em;
-    width: inherit;
+   
     text-align: justify;
     color: getColor("advantages-text");
     margin: 0;

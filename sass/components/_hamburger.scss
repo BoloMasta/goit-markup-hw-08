@@ -8,9 +8,8 @@
 
   &__menu {
     position: absolute;
-    left: -110%;
+    left: -130%;
     @include transition(all);
-  
 
     &--active {
       width: 100vw;
@@ -28,11 +27,12 @@
     border: none;
     background-color: transparent;
     position: absolute;
-  
+
     right: 20px;
     top: 20px;
-    &:hover, &:focus {
-      fill: getColor("menu-highlight")
+    &:hover,
+    &:focus {
+      fill: getColor("menu-highlight");
     }
   }
 
@@ -64,7 +64,7 @@
 
   &__contact-list {
     list-style: none;
-    margin-top: 320px;
+    margin-top: 280px;
   }
 
   &__contact-list-item {
@@ -115,6 +115,9 @@
 
   &__social-link {
     text-decoration: none;
+    @include text(500);
+    font-size: pxToRem(18);
+    line-height: pxToRem(24);
     color: getColor("menu-highlight");
   }
 }

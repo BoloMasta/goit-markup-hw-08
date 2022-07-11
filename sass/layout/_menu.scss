@@ -12,9 +12,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .menu__logo {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 
@@ -25,12 +25,11 @@
     border-bottom: 1px solid getColor("menu-border");
 
     &__contact {
-      width: 165px;
+     // width: 165px;
       height: 14px;
-      text-align: left;
       text-decoration: none;
       color: getColor("menu-contact-links");
-      text-align: right;
+      text-align: left;
       display: block;
       justify-content: end;
       align-items: center;
@@ -75,12 +74,6 @@
       &:first-child {
         margin-bottom: 10px;
       }
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .menu__logo {
-      margin-left: 15px;
     }
   }
 }

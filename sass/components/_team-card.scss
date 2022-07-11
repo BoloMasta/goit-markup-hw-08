@@ -1,11 +1,10 @@
 .team-card {
-  width: 450px;
+  width: 100%;
   text-align: center;
   margin: 0;
 
   &__image {
-    width: 450px;
-    height: 460px;
+    width: inherit;
     display: block;
   }
 

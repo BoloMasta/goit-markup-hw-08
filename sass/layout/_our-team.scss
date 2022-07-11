@@ -19,20 +19,32 @@
     padding: 0;
     margin: 0;
     text-align: center;
-    width: 450px;
+    //width: 450px;
   }
 
   &__item {
-    width: 450px;
-    height: 622px;
-    float: left;
+    width: calc(100% - 20px);
+    // height: 622px;
+    
     background: getColor("our-team-card-background");
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    margin-bottom: 30px;
+   // margin: 30px auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
+@media screen and (max-width: 767px) {
+.our-team {
+  &__item {
+    // padding-bottom: 20px;
+  }
+}
+
+}
+
 
 // MEDIA FOR TABLET
 
@@ -50,8 +62,12 @@
     &__item {
       width: 354px;
       height: 536px;
+      float: left;
       &:nth-child(2n - 1) {
         margin-right: 30px;
+      }
+      &:nth-child(-n+2) {
+        margin-bottom: 30px;
       }
     }
   }
@@ -63,6 +79,7 @@
   .our-team {
     &__grid {
       width: 1170px;
+     
     }
 
     &__header {
@@ -72,8 +89,8 @@
     }
 
     &__item {
+      float: left;
       width: 270px;
-      height: 428px;
       &:not(:last-child) {
         margin-right: 30px;
       }

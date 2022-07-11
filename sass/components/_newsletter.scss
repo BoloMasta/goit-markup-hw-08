@@ -62,7 +62,7 @@
 @media screen and (min-width: 320px) and (max-width: 460px) {
   .newsletter {
     &__input {
-      width: 280px;
+      width: calc(100% - 40px);
     }
   }
 }
