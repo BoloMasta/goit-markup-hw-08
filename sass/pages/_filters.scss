@@ -1,5 +1,9 @@
 .filters {
   @extend %setFlex;
+  margin-top: -30px;
+  margin-left: 10px;
+  margin-right: 10px;
+
   &__btn {
     @include text(500);
     background: getColor("filters-button-background");

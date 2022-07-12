@@ -1,21 +1,21 @@
 .project {
   margin: 0 auto;
+
   &__box {
-    width: 450px;
-    height: 294px;
+    max-height: 294px;
     overflow: hidden;
     position: relative;
   }
 
   &__image {
-    width: 450px;
-    height: 294px;
+    width: 100%;
+    height: 100%;
     display: inline-block;
   }
 
   &__overlay {
-    width: 450px;
-    height: 294px;
+    width: 100%;
+    height: 100%;
     background-color: getColor("projects-overlay-background");
     @extend %setFlex;
     position: absolute;
@@ -27,8 +27,7 @@
 
   &__description {
     @include text(400);
-    width: 402px;
-    height: 140px;
+    width: 100%;
     letter-spacing: 0.03em;
     font-size: pxToRem(18);
     line-height: pxToRem(28);
@@ -36,7 +35,7 @@
   }
 
   &__figcaption {
-    height: 95px;
+    // height: 95px;
     font-size: pxToRem(16);
     line-height: pxToRem(30);
     letter-spacing: 0.03em;

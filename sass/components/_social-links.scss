@@ -11,8 +11,9 @@
     background-color: inherit;
     border-radius: 50%;
     @extend %setFlex;
-    fill: getColor('icon');
+    fill: getColor("icon");
     @include transition(background-color);
+
     &:hover {
       background-color: getColor("icon-highlight-background");
       & .social-links__use {
@@ -20,11 +21,13 @@
       }
     }
   }
+
   &__icon {
     width: 20px;
     height: 20px;
     @include transition(fill);
   }
+
   &__use {
     fill: getColor("icon");
   }
@@ -32,7 +35,8 @@
 
 @media screen and (max-width: 767px) {
   .social-links {
-   padding-bottom: 20px;
+    &__link {
+      margin-bottom: 20px;
+    }
   }
-  
-  }
+}
