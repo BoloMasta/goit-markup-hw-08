@@ -4,6 +4,7 @@
   display: block;
   text-align: center;
   margin: 60px auto;
+
   &__header {
     font-size: pxToRem(14);
     line-height: pxToRem(16);
@@ -24,6 +25,7 @@
       background-color: getColor("icon-highlight-background");
     }
   }
+
   &__icon,
   &__svg-use {
     width: 20px;
@@ -40,6 +42,7 @@
     height: 80px;
     float: left;
     margin: -120px 0 0 450px;
+    
     &__header {
       margin: 0;
     }

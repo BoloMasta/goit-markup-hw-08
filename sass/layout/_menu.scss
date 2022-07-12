@@ -12,10 +12,8 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .menu__logo {
-    margin-left: 15px;
-  }
+.menu__logo {
+  margin: 0 83px 0 15px;
 }
 
 // MEDIA FOR TABLET

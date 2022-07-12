@@ -142,12 +142,20 @@
     padding: 0;
     @extend %setFlex;
     @include transition(box-shadow);
+
     &:hover {
       box-shadow: 1px 1px 3px getColor("form-icon-not-active");
+      & .modal__btn--close {
+        fill: getColor("form-icon-active");
+      }
+
     }
     &:active {
       box-shadow: inset 1px 1px 1px getColor("form-icon-not-active"),
         1px 1px 3px getColor("form-icon-not-active");
+        & .modal__btn--close {
+        fill: getColor("form-icon-active");
+      }
     }
   }
 
@@ -160,6 +168,7 @@
       width: 18px;
       height: 18px;
       fill: getColor("form-icon-not-active");
+      @include transition(fill);
     }
   }
 }
