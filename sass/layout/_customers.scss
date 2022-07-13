@@ -19,16 +19,16 @@
   }
 
   &__icon {
-    width: 106px;
-    height: 60px;
+    width: pxToRem(106);
+    height: pxToRem(60);
     fill: getColor("icon");
     @include transition(fill);
     padding: 5px;
   }
 
   &__item {
-    width: 210px;
-    height: 92px;
+    width: pxToRem(210);
+    height: pxToRem(92);
     border: 1px solid getColor("icon");
     border-radius: 4px;
     @extend %setFlex;
@@ -63,7 +63,7 @@
 @media screen and (min-width: 473px) and (max-width: 767px) {
   .customers {
     &__list {
-      width: 450px;
+      width: pxToRem(450);
     }
 
     &__item {
@@ -83,12 +83,12 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers {
     &__list {
-      width: 738px;
+      width: pxToRem(738);
     }
 
     &__item {
       float: left;
-      width: 226px;
+      width: pxToRem(226);
       &:nth-child(3n) {
         margin-right: 0;
       }

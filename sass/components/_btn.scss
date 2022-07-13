@@ -1,8 +1,8 @@
 .btn {
   background-color: getColor("lead-button");
   color: getColor("lead-text");
-  width: 200px;
-  height: 50px;
+  width: pxToRem(200);
+  height: pxToRem(50);
   font-size: pxToRem(16);
   @include text(700);
   line-height: 1.875;

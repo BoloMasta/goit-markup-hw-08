@@ -10,8 +10,9 @@
 
 .modal {
   position: absolute;
-  width: 450px;
-  min-height: 609px;
+  width: calc(100% - 20px);
+  max-width: pxToRem(450);
+  min-height: pxToRem(609);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -25,7 +26,7 @@
   @include transition(left);
 
   &__header {
-    width: 370px;
+    width: calc(100% - 20px);
     margin: 40px auto 0 auto;
     text-align: center;
     @include text(700);
@@ -54,7 +55,7 @@
   }
   &__input {
     display: block;
-    width: 370px;
+    width: 100%;
     height: 40px;
     border: 1px solid getColor("form-input-border");
     border-radius: 4px;
@@ -74,7 +75,7 @@
     font-size: pxToRem(12);
     line-height: pxToRem(14);
     letter-spacing: 0.01em;
-    width: 370px;
+    width: 100%;
     height: 120px;
     border: 1px solid getColor("form-input-border");
     border-radius: 4px;
@@ -82,7 +83,7 @@
     padding: 12px 16px;
     @include text(400);
     @include transition(border-color);
-    ::placeholder {
+    &::placeholder {
       color: getColor("form-comment-placeholder");
     }
     &:active,
@@ -106,7 +107,7 @@
   }
   &__agreement-label {
     display: inline-block;
-    margin: auto;
+    margin: 0 10px;
     font-size: pxToRem(12);
     line-height: pxToRem(14);
     letter-spacing: 0.03em;
@@ -188,18 +189,11 @@
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
     min-height: 581px;
 
     &__header {
       line-height: pxToRem(23);
-      width: 448px;
-    }
-
-    &__input {
-      width: 448px;
-    }
-    &__textarea {
       width: 448px;
     }
 

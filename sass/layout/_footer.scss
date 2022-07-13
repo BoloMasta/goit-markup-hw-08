@@ -5,7 +5,7 @@
   color: getColor("footer-address");
 
   &__address {
-    width: 246px;
+    width: pxToRem(246);
     height: auto;
     letter-spacing: 0.03em;
     @include text(400);
